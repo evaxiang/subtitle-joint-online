@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - cs_date_record@localhost" uuid="2c2655c6-ef7b-4ee2-a3a5-7a9e9143be4b">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="cs_date_record"/>
+    <table name="t_date_record" schema="" catalog="cs_date_record" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="bro_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="sis_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="pair_up_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_pair_up" schema="" catalog="cs_date_record" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="date_time" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="details" sqlType="CHAR" precision="200" scale="0" nullable="false" jdbcType="1"/>
+      <column name="create_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="t_user" schema="" catalog="cs_date_record" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1"/>
+      <column name="password" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1"/>
+      <column name="is_sister" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" remarks="MOihqOekuuW8n+WFhO+8jDHooajnpLrlp5Dlprk="/>
+      <column name="is_single" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" remarks="MOihqOekuumdnnNpbmdsZe+8jDHooajnpLpzaW5nbGU="/>
+      <column name="mobile" sqlType="CHAR" precision="11" scale="0" nullable="true" jdbcType="1"/>
+      <column name="introduction" sqlType="CHAR" precision="30" scale="0" nullable="true" jdbcType="1"/>
+      <column name="login_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+  </data-source>
+</component>

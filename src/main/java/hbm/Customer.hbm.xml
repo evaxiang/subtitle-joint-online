@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.Customer" table="CUSTOMERS" dynamic-insert="true" dynamic-update="true">
+        <id name="id" column="ID" type="long">
+            <generator class="increment"></generator>
+        </id>
+
+        <property name="age" column="AGE" type="string" />
+        <property name="name" column="NAME" type="string"/>
+
+        <set name="orders" cascade="delete" inverse="true">
+            <key column="CUSTOMER_ID"/>
+            <one-to-many class="com.Order"/>
+
+        </set>
+
+    </class>
+
+</hibernate-mapping>
+
+
