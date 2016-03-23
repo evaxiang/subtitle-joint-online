@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/main/java/com/AjaxData.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/controller/IndexController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/util/OssTemplate.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/public/css/h5.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/public/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/public/js" charset="UTF-8" />

@@ -1,15 +1,16 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 /*覆盖原CSS*/
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, .lead {
     font-family: "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 }
 .container { min-width: 970px !important;}
+.container-fluid { max-width:970p !important;}
 
 
 
 /*框架&风格*/
-body { padding-top:110px; font: 14px/24px Arial, "Microsoft YaHei";
+body { padding-top:80px; font: 14px/24px Arial, "Microsoft YaHei";
     background: #eee; background-size:6px 6px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)) 5px, to(rgba(255,255,255,.3)) 1px);
     background-image: -webkit-linear-gradient(left, rgba(255,255,255,0) 5px, rgba(255,255,255,.3) 1px);
@@ -46,7 +47,7 @@ body { padding-top:110px; font: 14px/24px Arial, "Microsoft YaHei";
 
 /*登录*/
 .signin_bg { background:url(../images/ico_weixin_customer.png) no-repeat 20% bottom;}
-.signin { margin-top:15%;}
+.signin { margin:auto; width:300px;}
 .signin .signin-heading { margin-bottom: 10px; font-size:18px;}
 .signin .signin-heading li { width:50%; text-align:center;}
 .signin .signin-heading li a { color:#4d8203;}
@@ -150,13 +151,6 @@ body { padding-top:110px; font: 14px/24px Arial, "Microsoft YaHei";
 .user_info .col-sm-6, .user_info .col-lg-4 { min-height:45px;}
 
 
-
-@media (max-width: 1000px){
-    body { min-width:1000px;}
-    .submenu { width:240px;}
-    .talk_area .head div.head_cont span {max-width:160px;}
-}
-
 /*提示区*/
 .alert_warning,
 .alert_danger,
@@ -207,3 +201,19 @@ body { padding-top:110px; font: 14px/24px Arial, "Microsoft YaHei";
 .cont_more { margin: 0 -15px; padding:15px 15px 0 15px; border-top:1px solid #ddd;}
 .cont_more a { display:block; line-height:60px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:54px; text-decoration:none; color:#999; border:3px dotted #999; -webkit-border-radius: 10px; border-radius: 10px;}
 .cont_more a:hover { background:#fafafa; color:#555;}
+
+
+
+@media (max-width: 1024px){
+    .submenu { width:240px;}
+    .talk_area .head div.head_cont span {max-width:160px;}
+}
+
+@media (max-width: 768px){
+    .submenu { width:240px;}
+	.navbar-header { display:none;}
+	#top_nav li { float:left; width:auto;}
+	.affix { position:relative; top:-15px; width:100%; margin:0;}
+	.affix ul li { float:left;}
+	#footer { display:none;}
+}

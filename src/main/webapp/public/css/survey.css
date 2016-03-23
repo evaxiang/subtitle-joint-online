@@ -1,0 +1,197 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; font-family:Arail,"Microsoft YaHei";}
+body{ background:#47d3dc; font-size:14px; line-height:24px;}
+a{ text-decoration:none;}
+ul,li { list-style:none;}
+
+
+
+/*按钮
+.btn_1{ width:90%; margin-left:5%; height:40px; line-height:40px; color:#07b4be; background:#fff; border-radius:10px; border:none;}
+.btn_1:hover{background:#eff0f0;}
+.btn_2{ width:90%; margin-left:5%; height:40px; line-height:40px; color:#07b4be; background:#fff; border-radius:10px; border:none;}
+.btn_2:hover{background:#eff0f0;}
+*/
+
+/*字体颜色
+.t_primary_1{ color:#55b8be;}
+.t_primary_2{ color:#b93230;}
+.t_primary_3{ color:#443a01; font-size:24px;}
+*/
+
+
+
+
+
+
+/*首页
+.baby_main{ margin:0; padding:0;}
+.baby_title{ background:url(../images/title1.png) no-repeat; height:71px; background-size:80%; margin-left:20%; margin-top:20px;}
+.baby_title_2{ margin:0 auto; width:280px; font-size:18px; line-height:36px; color:#fff;}
+.baby_bg{ background:url(../images/baby_1.png) no-repeat; height:211px; background-size:80%; margin-left:20%; margin-top:10%;}
+.evaluation_footer{ position:fixed; z-index:99; left:0; bottom:0; background:url(../images/bg_order-fis.png) ; width:100%;}
+.baby_footer{ position:fixed; z-index:99; left:0; bottom:1%; width:100%; }
+*/
+
+/*填写资料
+.baby_form{ margin-top:20px;}
+.input_1{ margin-left:7%; margin-bottom:5%; width:80%; height:40px; line-height:40px; border:2px solid #70edf4; background:#fff; color:#000; padding-left:15px; border-radius:10px;}
+.baby_gender{ margin-left:10%; margin-top:5%; color:#fff; font-size:16px;}
+.baby_option{ margin-left:10%; }
+.baby_option li{ float:left; width:42%;  margin-top:3%; padding-left:5%; padding-top:3%; border-right:1px solid #e8f0f0; margin-bottom:10%;}
+.baby_option li:last-child{ border-right:none;}
+.baby_option li img{width:80%; }
+.baby_option_on{ border:2px solid #fff947; border-radius:150px;}
+.baby_submit{ margin-bottom:2%;}
+*/
+
+
+/*赵主任提问
+.body_1{ background:#fff;}
+.baby_gender2{ background:url(../images/bg_1.png) no-repeat; background-size:90%; margin-left:10%; margin-top:5%; padding-top:5px; height:86px;}
+.baby_gender2 p{ text-align:center; color:#fff; font-size:18px; }
+.baby_gender_main{ margin-top:-20px; padding:5%;}
+.baby_number{ text-align:center;}
+.baby_questions{ margin:2% 0; font-size:16px; line-height:32px;}
+.baby_answer{ margin-left:5%;}
+*/
+
+
+/*赵主任的意见
+.baby_opinion{ margin-top:10%; padding:10% 5%; border-radius:10px; background:rgba(255,255,255,.5); box-shadow:5px 5px 5px rgba(0,0,0,.3); }
+.baby_opinion_l{ float:left; margin-left:5%; margin-right:2%;}
+.baby_opinion_l img{ border-radius:150px; width:100px; height:100px; background:#fff; border:2px solid #55b8be;}
+.baby_opinion_r{ margin:5% 0 8% 40%;}
+.baby_opinion_2{ margin-top:25%; padding:10% 5% 20% 5%; border-radius:10px; background:rgba(255,255,255,10); box-shadow:5px 5px 5px rgba(0,0,0,.3); }
+.baby_clip{ position:relative; top:-75px; left:30%;}
+.baby_clip img{ width:40%;}
+.baby_opinion_3{ margin-top:-20%;}
+*/
+
+/*奖状
+.baby_testimonials{ background:url(../images/testimonials_1.png) no-repeat; background-size:90%; margin-left:10%; margin-top:15%; padding:6% 10% 40%; }
+.testim_contain{ width:95%;}
+.testim_main{ margin-top:6%;}
+.testim_main_l{ float:left; width:45%; margin-left:10%; margin-top:5%; }
+.testim_main_l p{ color:#fff}
+.testim_main_r{}
+.tes
+tim_main_r img{ width:35%;}
+*/
+
+/*打赏医生
+.docter_exceptional{ background:#fff;}
+.exceptional_main{ margin:0; padding:0;}
+.exceptional_content{ padding:5%;  color:#737373;}
+.exceptional_eva{}
+.exceptional_eva li{ float:left; margin-right:-10px; margin-top:2%;}
+.exceptional_eva li img{ width:60%;}
+.exceptional_eva2{ clear:both; padding-top:10px; }
+.exceptional_eva2 p{ color:#3e3e3e; line-height:30px;}
+.exceptional_content2{ padding:2%; color:#737373;}
+.exceptional_content2_min{ background:url(../images/exceptional_form.png) no-repeat; min-height:547px; background-size:100%;}
+.exceptional—_price{ float:right; z-index:99; margin-top:50%; margin-right:10%; width:20%; height:5%; border-radius:5px; background:#f0f0f0; border:2px solid #ffd800; padding:5px 10px; }
+.exceptional—_price p{ color:#000; font-size:16px; line-height:16px; text-align:center;}
+.exceptional—_price2{}
+.exceptional—_price2 a{ text-decoration:none; border:none;}
+.exceptional—_price2 img{ width:80%; margin-left:11%; margin-top:-2%; }
+*/
+
+
+
+/*宝宝测试活动（第二版）css*/
+
+/*按钮——宝宝测试活动*/
+.baby_test_btn1{ width:90%; margin-left:5%; height:45px; line-height:45px; color:#fff; font-size:18px; background:rgba(255,255,255,.5); border:none;}
+.baby_test_btn1:hover{background:#ce2fe6;}
+
+
+/*字体——宝宝测试活动*/
+.t_primary1{ color:#f3e72c;}
+
+
+/*首页——宝宝测试活动*/
+.baby_test_body1{ background:url(../images/bg_baby_test1.png) no-repeat;  background-size:100%; }
+.baby_test_main{ margin:0; padding:0;}
+.baby_test_content1{ margin-top:35%;}
+.baby_test_content1 img{ width:80%; margin-left:10%;}
+.baby_test_content2{ margin-top:5%; }
+.baby_test_content2 p{ font-size:16px; line-height:30px; color:#fff; text-align:center; }
+.baby_test_content3{ margin-top:40%;  }
+.baby_test_content3 img{ width:80%; margin-left:10%;}
+.baby_test_content4{ margin-top:12%; }
+.baby_test_content4 p{ font-size:20px; line-height:36px; color:#fff; text-align:center; }
+
+
+/*填写资料——宝宝测试活动*/
+.baby_test_body2{ background:url(../images/bg_baby_test2.png); background-size:100%; }
+.baby_test_form{ margin-top:20px;}
+.baby_test_input1{ margin:2%; width:70%;  background:url(../images/baby_test_input1.png) no-repeat; background-size:100%; padding:4% 0 5% 25%; border:none; color:#fff; font-size:16px;}
+.baby_test_input2{ margin:2%; width:70%;  background:url(../images/baby_test_input2.png) no-repeat; background-size:100%; padding:4% 0 5% 25%; border:none; color:#fff; font-size:16px;}
+.baby_test_input3{ margin:2%; width:70%;  background:url(../images/baby_test_input3.png) no-repeat; background-size:100%; padding:4% 0 5% 25%; border:none; color:#fff; font-size:16px;}
+.baby_test_input4{ margin:2%; width:70%;  background:url(../images/baby_test_input4.png) no-repeat; background-size:100%; padding:4% 0 5% 25%; border:none; color:#fff; font-size:16px;}
+.baby_test_option{ margin-left:10%; }
+.baby_test_option li{ float:left; width:42%;  margin-top:3%; padding-left:4%; padding-top:3%;  margin-bottom:10%;}
+.baby_test_option li:last-child{ border-right:none;}
+.baby_test_option li img{width:80%; }
+.baby_test_option_on{ border:2px solid #ce2fe6; border-radius:150px;}
+.baby_test_submit{ margin-bottom:2%;}
+
+
+/*提问——宝宝测试活动*/
+.baby_test_question{ margin-top:15%; }
+.baby_test_question2{ width:90%; margin-left:5%; padding:4% 0; color:#fff; font-size:20px; text-align:center; background:rgba(255,255,255,.5); border:none;}
+.baby_test_question3{ margin-top:15%;}
+.baby_test_question3_2{ width:85%; margin-left:5%; padding:4% 0 4% 5%; line-height:36px; color:#fff; font-size:22px; background:rgba(206,47,230,.4); border-radius:5px 5px 0 0; border-bottom:2px solid rgba(255,255,255,.5);}
+.baby_test_question3_3{ width:85%; margin-left:5%; padding:4% 0 4% 5%; line-height:36px; color:#fff; font-size:22px; background:rgba(206,47,230,.3); border-radius:0 0 5px 5px; }
+.baby_test_question3_4{}
+.baby_test_question3_4 li{ line-height:55px;}
+.baby_test_question3_4 li img{ border:none; vertical-align:sub;}
+.baby_test_question3_5{ padding-left:50px; margin-top:-56px;}
+.baby_test_submit2{ margin-top:8%; margin-bottom:5%;}
+
+
+/*评测结果——宝宝测试活动*/
+.baby_test_results{ margin-top:6%;}
+.baby_test_results p{ text-align:center; font-size:30px;}
+.baby_test_results2{ margin-top:3%;}
+.baby_test_results2 img{ width:90%; margin-left:5%; }
+.baby_test_submit4{ margin-bottom:3%;}
+
+
+/*赵主任的意见——宝宝测试活动*/
+.baby_test_body3{ background:url(../images/bg_baby_test2.png); background-repeat:round; background-size:100%; }
+.baby_test_opinion{ margin-top:8%;}
+.baby_test_opinion2{ margin-top:5%; padding:2%; border-radius:10px;  color:#fff; }
+.baby_test_opinion2_l{ float:left; margin-left:5%; margin-right:2%;}
+.baby_test_opinion2_l img{ width:120px; height:auto; background:#fff; border:none;}
+.baby_test_opinion2_r{ margin:5% 0 8% 50%;}
+.baby_test_opinion2_r p{ font-size:16px;}
+.baby_test_opinion3{ margin-top:15%;}
+.baby_test_opinion3_2{ width:85%; min-height:200px; margin-left:5%; padding:3% 0 3% 5%; line-height:30px; color:#fff; font-size:18px; background:rgba(255,255,255,.4); border-radius:5px;}
+.baby_test_opinion3_2 p{ font-size:16px; line-height:24px;}
+
+
+/*奖状——宝宝测试活动*/
+.baby_test_testi{ }
+.baby_test_testi2{ background:url(../images/baby_test_testi.png) no-repeat; background-size:100%; padding:48% 0 52% 30%;}
+.baby_test_testi3{ margin-top:-10% }
+.baby_test_testi3_l{ float:left; margin-left:5%; background:rgba(255,255,255,.4); border-right:2px solid rgba(255,255,255,.3); box-shadow:5px 5px 5px rgba(0,0,0,.3); color:#fff;  width:22%; padding:2% 3% 0 3%; min-height:130px;}
+.baby_test_testi3_r{ float:left; margin-right:2%; background:rgba(255,255,255,.4); box-shadow:5px 5px 5px rgba(0,0,0,.3); color:#fff; width:60%; padding-top:2%; text-align:center; min-height:130px; font-size:16px; line-height:40px;}
+.baby_test_testi4{ margin-top:-20% }
+.baby_test_testi4 img{ width:100%;}
+.baby_test_submit3{ margin-top:-2%; margin-bottom:2%;}
+
+
+
+
+
+/*二维码——宝宝测试活动*/
+.baby_test_code{ }
+.baby_test_code img{ width:50%; float:right; margin-right:10px;}
+.baby_test_code2{ }
+.baby_test_code2 img{ width:50%; margin:10% 25% 0 25%;}
+.baby_test_code3{ margin-top:5%; }
+.baby_test_code3 p{ line-height:30px; color:#fff; text-align:center; }
+.baby_test_code3_2{ background:rgba(255,255,255,.4); margin:2% 5% 0 5%;}

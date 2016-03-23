@@ -1,0 +1,224 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; font-family:Arail,"Microsoft YaHei";}
+body{font-size:14px; line-height:24px; background-color:#fff;}
+a{ text-decoration:none;}
+img{ border:none;}
+ul,li{ list-style:none;}
+details summary::-webkit-details-marker { display:none; }
+button,input,select,textarea{font-size:100%; -webkit-appearance:none; appearance:none;}
+select{ border:none;}
+
+
+/*文字*/
+.t_primary_1{ color:#ff0000!important;}
+.t_primary_2{ color:#000!important; font-size:16px;}
+.t_primary_3{ color:#787878!important;}
+.t_primary_4{ color:#2ea65e!important;}
+.t_primary_5{ color:#eee!important;}
+.t_primary_6{ color:#ffff00!important; font-size:16px;}
+
+/*按钮*/
+.btn_gray{ background-color:#787878!important;}
+.btn_pay{ display:inline-block; width:50%; height:50px; line-height:50px; margin-left:25%; background-color:#1c974d; font-size:16px; color:#fff; text-align:center; border:none; border-radius:5px; }
+.btn_consult_1{ display:inline-block; width:100%; height:50px; line-height:50px; background-color:#1c974d; font-size:16px; color:#fff; text-align:center; border:none; border-radius:5px; }
+.btn_consult_2{ display:inline-block;  background:#2ea65e;  border-radius:4px; width:100px; height:45px; line-height:45px; text-align:center; font-size:16px; color:#fff;}
+.btn_consult_3{ display:inline-block;  background:#2ea65e;  border-radius:4px; width:100px; height:45px; line-height:45px; text-align:center; font-size:16px; color:#fff;}
+
+/*表单*/
+.input_order_fill{ position:relative; margin-left:28%; padding-left:10px;  width:71%; height:45px; font-size:14px; border:none; color:#000;}
+
+
+
+
+/*公共样式*/
+.left{ float:left!important;}
+.right{ float:right!important;}
+.margin_tr10{ margin-right:10px;}
+
+
+/*首页*/
+.home_main{ display:inline-block;}
+.home_main img{ width:100%;}
+.home_bottom{position:fixed; left:0; bottom:0; width:100%; padding:15px 0 10px 0;  background:#2ea65e; text-align:center;}
+.home_bottom a{ float:left; width:30%; margin-left:1.5%; margin-right:2%;}
+.home_bottom a:last-child{ margin-right:0;}
+.home_bottom a img{ width:100%;}
+.home_bottom a:last-child{ margin-right:0;}
+
+
+/*五大特权——会员服务*/
+.service_header{ background-color:#eee; color:#ef6e20; text-align:center;}
+.service_header h3{ font-size:18px; font-weight:normal; line-height:50px;}
+.service_list_form li{line-height:45px; padding:5px 10px;  color:#119847;  font-size:16px;}
+.service_list_form li:first-child{ margin-top:15px;}
+.service_list_form li.bg_list_1{background:#d5eddf;}
+.service_list_form li:nth-child(odd){background:#d5eddf;}
+
+
+/*五大特权详情*/
+.service_list_form{}
+.service_list_form .privilege_list{ line-height:45px; padding:5px 10px;  color:#119847;  font-size:16px;}
+.service_list_form .bg_list_1{background:#d5eddf;}
+.docter_team_main{ padding:5px 30px 10px 30px; text-align:center; color:#d7d7d7; line-height:24px;}
+.bg_privilege_1{ background-color:#2ea89c;}
+.bg_privilege_2{ background-color:#ecc55d;}
+.docter_team_main h3{ color:#fff; font-size:18px; line-height:45px; font-weight:normal;}
+.corsur_1{ }
+.corsur_1 img{ width:100%;}
+.service_banner{ margin-bottom:-10px;}
+.service_banner img{ width:100%;}
+
+
+
+
+/*专属时钟*/
+.fill_list_image{ margin-left:50px; font-size:14px;}
+.exclusive_list_form li{line-height:45px; margin-top:5px; padding:5px 10px;  color:#119847; background-color:#96d2ae; font-size:14px;}
+.exclusive_list_form li .exclusive_main{ float:left;}
+.exclusive_list_form li .exclusive_main img{ width:90%; vertical-align:middle;}
+
+
+
+/*购买会员*/
+.buy_attention{ background-color:#eee; text-align:center; height:40px;}
+.buy_attention p{ color:#ff0000; font-size:12px; line-height:40px;}
+.fill_information_main{ background-color:#96d2ae; padding:10px 5% 20% 5%;}
+.fill_information_main h3{ width:100%; text-align:center; border-bottom:1px solid #fff; color:#fff; font-size:18px; line-height:45px; font-weight:normal;}
+.fill_list_content{ margin-top:15px; height:50px; line-height:50px; padding:0 10px; border:none; border-radius:5px;  background:#fff;  font-size:16px;}
+.fill_list_content_f{ position:absolute; left:12%; width:35%;  color:#787878;}
+.activity_address{margin-top:15px; height:50px; line-height:50px;  border:none; font-size:16px;}
+.activity_address .option_s{ float:left; background:url(../images/member/option_bg.png) no-repeat; background-size:100% 100%; margin-right:2%; width:48%; min-height:50px; padding:0 6%; border:none; border-radius:5px; font-size:14px; color:#787878; }
+.fill_list_content .option_s{ float:left; background:url(../images/member/option_bg.png) no-repeat; background-size:100% 100%; margin-left:30%; margin-right:2%; width:55%; min-height:49px; padding:0 6%; border:none; border-radius:5px; font-size:14px; color:#787878; }
+
+.buy_pay{ margin-bottom:10px;}
+.buy_pay h3{ width:100%; text-align:center; border-bottom:1px solid #1c974d; color:#1c974d; font-size:18px; line-height:45px; font-weight:normal;}
+
+
+
+
+/*会员中心*/
+.members_data_main{ background-color:#eee; padding:8% 10%;}
+.personal_date_l{display:inline-block;  float:left; width:45%;}
+.personal_portrait{ }
+.personal_portrait img{ width:100px; height:100px; border-radius:150px; border:2px solid #fff; }
+.personal_date_r{ }
+.personal_date_r p{ text-align:left; line-height:24px; color:#787878;}
+
+.members_rights_form{ margin-bottom:90px;}
+.margin_t15{ margin-top:15px;}
+.fill_list_con{ height:50px; line-height:45px; padding:5px 10px; border-top:1px solid #e4e4e4; background:#fff; color:#5c5c5c;  font-size:18px;}
+.fill_list_con:last-child{ border-bottom:1px solid #e4e4e4;}
+.fill_list_con_f{ margin-right:3%; }
+.fill_list_con_f img{ width:40px; height:40px; vertical-align:middle;}
+.fill_list_name{ margin-left:3%;  margin-right:10px; }
+.user_forward{float:right;}
+.user_forward img{  width:70%; vertical-align:middle;}
+
+
+/*体检报告*/
+.margin_t10{ margin-top:10px;}
+.medical_list_con{ height:45px; line-height:45px;  background:#f5f5f5; color:#5c5c5c;  font-size:16px;}
+.medical_list_con:hover{ background-color:#2ea65e; color:#fff;}
+.fill_list_results{ float:right; margin-right:10px; }
+
+.medical_attention{ text-align:center; background-color:#eee; border-top:1px solid #787878; padding:10px 0;}
+
+
+/*体检表*/
+.medical_header{ text-align:center;}
+.medical_header h2{ margin-top:10px; font-size:22px; color:#181818;}
+
+.medical_basic_info{ padding:0 10px 20px 10px;}
+.medical_basic_info table{ border-top:1px solid #d0d0d0;}
+.medical_basic_info table caption{ font-size:18px; color:#5b5b5b; margin:15px 0 10px 0;}
+.baby_details_content{ height:55px; }
+.baby_details_content .width_1{ width:1%;}
+.baby_details_content .width_2{ width:2%;}
+.baby_details_content .baby_details_title_1{ background-color:#eee; color:#181818;}
+.baby_details_content .baby_details_title_2{ background-color:#fff; color:#808080;}
+.advice_content{ height:85px;}
+
+.baby_details_content td{ width:3%; border-bottom:1px solid #d0d0d0; border-left:1px solid #d0d0d0; padding:0 10px; text-align:center; color:#888; font-size:14px;}
+.baby_details_content td:last-child{ border-right:1px solid #d0d0d0;}
+
+
+
+/*我的家庭医生*/
+.docter_data_main{ background-color:#fff; padding:5% 2%;}
+.docter_date_l{display:inline-block;  float:left; margin-right:10px;}
+.docter_portrait{ }
+.docter_portrait img{ width:50px; height:50px; border-radius:150px; border:1px solid #0e050a; }
+.docter_date_r{ }
+.docter_date_r p{ text-align:left; line-height:24px; color:#787878;}
+.f_right{ position:absolute; top:30px; right:5px; font-size:14px;}
+.margin_r5{ margin-right:5px;}
+.docter_intro{ border:1px solid #868284; border-radius:5px; margin:15px 10px; padding:10px;}
+.docter_evaluation_main{border:1px solid #868284; border-radius:5px; margin:15px 10px 0 10px; }
+.docter_evaluation{ width:100%; height:42px; line-height:42px; border-bottom:1px dashed #868284; font-size:12px;}
+.docter_evaluation:last-child{ border-bottom:none;}
+.docter_evaluation dt{ float:left;}
+.docter_evaluation span{ padding:10px; line-height:36px;}
+.star_evaluation{}
+.star_evaluation img{ width:14px; height:14px; position:relative; vertical-align:baseline; top:2px;}
+.docter_evaluation dd{ float:right;}
+.arrow_evaluation{}
+.arrow_evaluation img{ width:8px; height:16px; position:relative; vertical-align:baseline; top:3px; right:-10px;}
+
+.time_details_main{ margin:0; padding:10px;}
+.time_details_main h3{ text-align:center; line-height:36px;}
+.time_details_main table{ border-radius:5px; border:1px solid #868284; }
+.time_details_title{ height:75px;}
+.time_details_title td{ border-bottom:1px solid #868284; border-left:1px solid #868284; text-align:center; color:#252525; font-size:14px;}
+.time_details_title td:first-child{ border-left:none;}
+.time_details_content{ height:75px; }
+.time_details_content td{ width:3%;  border-left:1px solid #868284; padding:10px 0; text-align:center; color:#888; font-size:14px;}
+.time_details_content td:first-child{ border-left:none;}
+.docter_bottom_consult{ padding:5% 2%; }
+
+
+/*名医在线*/
+.docter_inline_header{ margin:0; padding:8% 10px 10px 8%;}
+.docter_image{ position:absolute; right:15px; top:5px;}
+.docter_image img{ width:78px; height:126px; vertical-align:baseline; position:relative; }
+.docter_inline_department{ background-color:#e8e7e7; padding:5px 10px; margin-top:15px; text-align:center;}
+.docter_inline_department h3{ text-align:center; color:#119847; line-height:36px;}
+.department_form{ display:inline-block;}
+.department_form li{ float:left; border:1px solid #6a6969; padding:5px 10px; margin-right:5px; }
+.department_form li.active{ border:1px solid #119847; color:#119847 }
+
+.docter_inline_intro{ display:inline-block; padding:10px 0; width:100%;}
+.docter_inline_intro .content{ float:left; width:48%; padding-left:10px;}
+.docter_inline_intro .content h3{ line-height:30px;}
+.docter_inline_intro .content p{ font-size:12px;height:140px;overflow:hidden;text-overflow:ellipsis;}
+.docter_inline_intro .image{ float:right; margin-right:10px; padding-left:10px;}
+.docter_intro_image{ width:120px; border:1px solid #2ea65e; border-radius:3px;}
+.docter_intro_image dt img{ width:120px;}
+.docter_intro_image dd{ text-align:center;}
+
+.docter_board_main{ padding:10px 10px 0 10px;}
+.docter_board_main a{ margin-top:-80px;}
+.docter_board_l{ width:60%;}
+.docter_board_l img{ position:relative; width:100%;}
+.docter_board_l .docter_board_l_content{ position:absolute; left:15%; top:3%;}
+.docter_board_l p{ font-size:0.9em; color:#fff; }
+
+
+/*专家视频互动*/
+.video_docter_header{ display:inline-block; width:100%; padding:10px 0; background-color:#96d3cd; color:#fff;}
+.video_docter_header h3{ width:100%;  margin:0 auto; text-align:center; line-height:36px; border-bottom:1px solid #fff;}
+.video_docter_header p{ padding:10px 20px;}
+.video_docter_header .video_main{ float:right; margin-right:15px; display:inline-block; position:relative; padding:0 15px; background:#f89f2b; color:#fff; font-size:16px; border-radius:5px; height:45px; line-height:45px;}
+.video_play{ display:inline-block; margin-left:5px; }
+.video_play img{ width:12px; height:20px; vertical-align:middle; margin-top:-2px; }
+.evaluation_form{}
+.evaluation_form li{ float:left; background:#f3f3f3; color:#787878; width:33%; height:45px; line-height:45px; text-align:center; border-right:1px solid #fff;}
+.evaluation_form li.cover{ background-color:#58b9b0; color:#fff;}
+.evaluation_form li:last-child{ border-right:none;}
+.evaluation_icon{}
+.evaluation_icon img{ width:22px; height:18px; position:relative; top:2px; right:5px; vertical-align:baseline;}
+.video_docter_intro{ clear:both; padding:10px 5%; position:relative;}
+.video_docter_intro dl dt{}
+.video_docter_intro dl dt img{ width:80px; height:80px; border:1px solid #787878; border-radius:150px;}
+.video_docter_intro dl dd{ position: absolute; top:25px; left:115px; color:#787878;}
+.video_docter_intro dl dd h4{ color:#000;}

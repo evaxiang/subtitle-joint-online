@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+/*公用样式*/
+* { margin:0; padding:0;}
+body {  margin:0; padding:0; min-width:320px; font-size:12px; color:#555;}
+body.white { background:#fff;}
+ul,li { list-style:none;}
+a { text-decoration:none;}
+input { outline:none;}
+textarea{list-style:none; overflow:hidden;}
+*:focus { background:#FFFFEE; outline:none;}
+
+
+/*布局*/
+.left { float:left;}
+.right { float:right;}
+.center { margin:auto; text-align:center;}
+
+.wrapper { padding:20px;}
+
+
+/*各类图标*/
+.arrow_left {display:inline-block; margin: 0 5px; border-right: 4px solid #333; border-top: 4px solid transparent; border-bottom: 4px solid transparent; opacity:0.5;}
+.arrow_right {display:inline-block; margin: 0 5px; border-left: 4px solid #333; border-top: 4px solid transparent; border-bottom: 4px solid transparent; opacity:0.5;}
+
+
+/*文字颜色*/
+.t_brown { color:#796958 !important;}
+.t_green { color:#6c8918 !important;}
+.t_gray { color:#535c69 !important;}
+.t_primary1{ color:#ff0000; font-size:16px; font-weight:700;}
+
+
+/*就诊记录*/
+.treatment_list h2 { padding: 0 20px;  height:35px; line-height:35px; background:url(../images/bg_wave.png) repeat-x bottom; background-size:10px; color:#fff; font-size:15px;}
+.treatment_list ul { padding:10px; background:url(../images/bg_dotted.png) repeat-y 70px; background-size:3px;}
+.treatment_list ul li { position:relative; margin:20px 0; padding:10px; margin-left:90px; background:#d5e4a9; border-radius:5px; line-height:20px; color:#6c8918;}
+.treatment_list ul li:before {content:""; display:block; position:absolute; left:-6px; top:16px; border-right: 8px solid #d5e4a9; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.treatment_list ul li time { position:absolute; left:-90px; text-align:center; line-height:14px;}
+.treatment_list ul li time small { display:block;}
+.treatment_list ul li span.ico_problem { display:inline-block; position:absolute; left:-40px; text-align:center; width:24px; height:24px; background:url(../images/ico_problem.png) no-repeat; background-size:cover;}
+
+
+/*问诊详情*/
+.dialogue { background:#f3f3f3;}
+.dialogue .date { padding-top:20px; text-align:center;}
+.dialogue .date time { display:inline-block; padding:3px 5px; background:#d3d3d3; border-radius:3px;}
+.dialogue .pic { width:100%;}
+
+.dialogue .my .photo { position:absolute; right:8px; width:40px; height:40px; border-radius:3px;}
+.dialogue .my .cont { position:relative; margin:20px 60px; padding:10px; background:#a3c43f; border:1px solid #8ea058; border-radius:5px; line-height:20px; color:#6c8918;}
+.dialogue .my .cont:before {content:""; display:block; position:absolute; z-index:2; right:-6px; top:16px; border-left: 8px solid #a3c43f; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.dialogue .my .cont:after {content:""; display:block; position:absolute; right:-8px; top:16px; border-left: 8px solid #8ea058; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.dialogue .my .cont p { color:#555;}
+
+.dialogue .others .photo { position:absolute; left:8px; width:40px; height:40px; border-radius:3px;}
+.dialogue .others .cont { position:relative; margin:20px 60px; padding:10px; background:#fff; border:1px solid #ddd; border-radius:5px; line-height:20px; color:#a0a0a0;}
+.dialogue .others .cont:before {content:""; display:block; position:absolute; z-index:2; left:-6px; top:16px; border-right: 8px solid #fff; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.dialogue .others .cont:after {content:""; display:block; position:absolute; left:-8px; top:16px; border-right: 8px solid #ddd; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.dialogue .others .cont p { color:#555;}
+
+
+/*就诊记录*/
+.treatment_history {}
+.user_info { padding:20px;  height:75px; background:url(../images/bg_wave.png) repeat-x bottom; background-size:10px; color:#fff; font-size:15px;}
+.user_info img { float:left; width:64px; border-radius:5px;}
+.user_info p { margin-top:10px; margin-left:70px; font-size:15px;}
+
+.treatment_history h2 { position:relative; top:-20px; margin:0 auto; width:40px; height:40px; line-height:40px; text-align:center; font-size:12px; color:#fff; background:url(../images/bg_month.png) no-repeat; background-size:cover;}
+.treatment_history > div.cont { background:url(../images/bg_dotted.png) repeat-y 50%; background-size:3px;}
+.treatment_history > div.cont:nth-child(odd) { background-color:#f7f9ea;}
+.treatment_history ul { display:inline-block; padding-bottom:30px; width:100%;}
+.treatment_history ul li { padding-bottom:20px; line-height:18px;}
+.treatment_history ul li:after { content:''; display:block; clear:both;}
+.treatment_history ul li img { float:left; margin-left:10px; width:125px; height:80px; border-radius:5px;}
+.treatment_history ul li p { margin-left:60%;}
+
+.treatment_history li:nth-child(even) img { float:right; margin-right:10px;}
+.treatment_history li:nth-child(even) p { margin-left:20px;}
+
+
+/*就诊详情*/
+.treatment_detail {}
+.pic_area { padding:20px;  height:140px; background:url(../images/bg_wave.png) repeat-x bottom; background-size:10px; color:#fff; font-size:15px; text-align:center;}
+.pic_area img { height:140px;}
+
+.treatment_page {margin:10px 4%; width:92%; line-height:20px; border-collapse:collapse;}
+.treatment_page td { padding: 5px 10px; border:1px solid #e1e1e1;}
+.treatment_page td.bg { background:#f4f4f4;}
+
+
+/*新生儿（新闻分类）*/
+.news_class { background:#f7f9ea;}
+.news_class ul {margin:20px auto; width:290px;}
+.news_class ul li { float:left; margin-bottom:10px; width:140px; height:140px; background:url(../images/bg_block.png) no-repeat; background-size:140px; text-align:center; font-size:15px; color:#fff;}
+.news_class ul li:nth-child(odd) { margin-right:10px;}
+.news_class ul li img { display:block; margin:20px auto 5px auto; width:80px; height:80px;}
+
+
+/*新闻列表*/
+.tab{ position:fixed; left:0; bottom:0; width:100%; height:50px; background-color:#fff; border-top:1px solid #cecece;}
+.tab a{ display:block; float:left;  width:20%; height:50px; line-height:50px; text-align:center; font-size:14px; color:#909090; text-decoration:none;}
+#sel{ color:#a2c43f; }
+.order_tab{ height:35px; font-size:14px; color:#7c7b7b; border-bottom:1px solid #eaeaea; text-align:center;}
+.order_tab li{ list-style:none; float:left; width:25%; height:35px; font-size:14px; line-height:35px; color:#7c7c7c; }
+.order_sel{-webkit-appearance:none; background:#a2c43f; color:#fff; padding:4px 5px; border-radius:5px;}
+
+.news_list { background:#f7f9ea;}
+.news_list ul li { position:relative; padding:15px; min-height:80px; background:url(../images/bg_dotted_2.png) repeat-x bottom; background-size:5px;}
+.news_list ul li:nth-child(even) { background-color:#f0f5e1;}
+.news_list ul li header { margin-left:130px; padding:3px 0; font-size:15px;}
+.news_list ul li img { position:absolute; top:15px;  width:120px; height:80px;}
+.news_list ul li  p { margin-left:130px; font-size:12px; line-height:18px;}
+
+
+/*新闻详情*/
+.news_detail { background:#f7f9ea; padding:15px; font-size:12px; line-height:24px; -webkit-box-sizing:border-box;}
+.news_detail h1 { font-size:20px; line-height:30px;}
+.news_detail time { display:block; margin-top:5px; color:#a0a0a0;}
+.news_detail .guide_info { margin:20px 0; padding:10px; background:#fff; border:1px solid #ddd; border-radius:5px;}
+
+
+/*电话沟通*/
+.contact_us {background:#f7f9ea;}
+.contact_us .header { padding-top:50px; height:150px; background:#f0f5e1; text-align:center; color:#6a3906;}
+.contact_us .btn_call { display:inline-block; margin-top:20px; background:url(../images/btn_call.png) no-repeat; background-size:cover; width:253px; height:46px; line-height:46px; font-size:24px; color:#fff; text-indent:10px;}
+.contact_us ul { padding:30px 20px; line-height:20px; color:#ab9a7f;}
+.contact_us ul li { padding: 0 0 10px 35px;}
+.contact_us ul li i { display:block; position:absolute; margin-left:-35px; width:25px; height:29px; background:url(../images/ico_ol.png) no-repeat; background-size:cover; color:#fff; text-align:center; font-size:16px; font-style:normal; line-height:25px;}
+
+
+/*医疗团队*/
+.medical_team { background:#f7f9ea url(../images/bg_wave.png) repeat-x 0 -195px; background-size:10px; }
+.medical_team dl { float:left; margin-top:20px; width:33%; text-align:center;}
+.medical_team dl dt { color:#6a3906; font-size:12px;}
+.medical_team dl dt img { display:block; margin: 0px auto 10px auto; width:80px; height:80px; border-radius:5px;}
+.medical_team dl dd { color:#ab9a7f; font-size:10px; line-height:15PX;}
+
+
+/*关于我们*/
+.about_us {background:#f7f9ea url(../images/bg_about_us.jpg) no-repeat 50% top; background-size:360px auto;}
+.about_us h1 { padding:85px 0 20px 0; font-size:20px; color:#6a3906; text-align:center;}
+.about_us p { padding: 0 20px; font-size:12px; color:#ab9a7f; line-height:24px;}
+
+
+/*医生信息*/
+.doctor_info { background:#f7f9ea;}
+.doctor_intro { padding:20px;  height:90px; background:url(../images/bg_wave.png) repeat-x bottom; background-size:10px; color:#fff; font-size:15px;}
+.doctor_intro img { float:left; width:90px; height:90px; border-radius:5px;}
+.doctor_intro dl { margin-left:100px; }
+.doctor_intro dl dt { font-size:18px; padding: 5px 0;}
+.doctor_intro dl dd { font-size:12px; line-height:20px;}
+
+.doctor_info ul { margin:15px; padding:15px; background:#f0f5e1; border:1px solid #e2e6ca; border-radius:5px;}
+.doctor_info ul li { font-size:12px; line-height:24px; color:#486a00;}
+
+
+/*按钮*/
+.btn_1{ display:block; position:relative; z-index:2; top:150px; left:100px; background:url(../images/bg_thermometer2.png) no-repeat; background-size:65%; width:168px; height:68px; border:none; font-size:16px; color:#fff; }
+.btn_1:hover{ background:url(../images/bg_thermometer3.png) no-repeat; background-size:65%; width:168px; height:68px; border:none;}
+
+/*历史记录*/
+.record_history { background:#f7f9eb;}
+.user_info2 { padding:20px;  height:105px; background:url(../images/bg_wave.png) repeat-x bottom; background-size:10px; color:#fff; font-size:15px;}
+.user_info2 img { float:left; width:85px; height:85px; border-radius:150px; border:4px solid #fff; margin-right:10px;}
+.user_info2 p { margin-top:10px; margin-left:70px; font-size:15px;}
+.record_project{ margin:10px 0 0 35%; height:30px;}
+.record_project li{ float:left; margin-right:30px; font-size:14px;}
+.record_project_on{ color:#f08957; padding-bottom:5px; border-bottom:1px solid #f08957;}
+.record_time{ margin:5px 0; padding-left:10px;}
+.record_time p{color:#a0a0a0;}
+.record_number{ padding-left:10px;}
+.record_number2{ background:url(../images/bg_dotted.png) repeat-y 5%; background-size:3px; height:120px;}
+.record_number2 h2{position:relative; width:40px; height:40px; line-height:40px; text-align:center; font-size:12px; color:#fff; background:url(../images/bg_month.png) no-repeat; background-size:cover;}
+.treatment_list ul li { position:relative; margin:20px 0; padding:10px; margin-left:90px; background:#d5e4a9; border-radius:5px; line-height:20px; color:#6c8918;}
+.record_content li{ position:relative; margin-left:17%; margin-top:-10%; margin-right:5%; padding:10px; background:#fff; border:1px solid #cacaca; border-radius:5px;}
+.record_content li:before {content:""; display:block; position:absolute; left:-8px; top:16px; border-right: 8px solid #cacaca; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.record_content p{line-height:24px;}
+.record_font1{ background:#ff0000; font-size:14px; color:#fff; margin-left:10px; padding:5px 10px;}
+.record_font2{ margin-bottom:10px;}
+
+
+/*实时温度*/
+.temperature{ width:320px; height:600px; margin:20px auto; background:url(../images/bg_thermometer.png) no-repeat; background-size:98%;}
+.temperature_number{ display:block; position:relative; top:100px; left:85px;}
+.temperature_font1{ font-size:55px; color:#000;}
+.temperature_font2{ position:relative; top:-55px; left:115px; font-size:24px; color:#000;}
+.temperature_font3{ position:relative; top:-35px; left:85px; border-radius:5px; background:#79e053; padding:5px; font-size:12px; color:#fff;}
+
+
+#circle {
+    position:relative;
+    z-index:1;
+    background-color: rgba(0,0,0,0);
+    border:7px solid rgba(214,214,214,10);
+    opacity:.9;
+    border-left:7px solid rgba(110,194,234,10);
+    border-bottom:2px solid rgba(247,249,235,10);
+    border-radius:175px;
+    width:180px;
+    height:180px;
+    margin:0 auto;
+    left:-5px;
+    top:-566px;
+
+}
+
+/*病例档案*/
+
+/*表单*/
+.input_1{ width:73%; height:45px; padding:0 2%; border:1px solid #cad1db; font-size:14px; color:#0c9405;}
+.button_submint{-webkit-appearance:none; width:100%; height:40px; line-height:40px; font-size:16px; font-weight:bold;  background:#0c9405; color:#fff; text-align:center; border-radius:5px; border:none;}
+.button_submint:hover{ -webkit-appearance:none; background:#0ec305;}
+
+.archives_banner{ display:inline-block; padding:10px 0; background:url(../images/records/bg_archives.png) no-repeat;  width:100%; height:100%; }
+.personal_date_l{ float:left; width:35%; padding:10px 0; text-align:center;}
+.personal_portrait{ }
+.personal_portrait img{ width:90px; height:90px; border-radius:150px; border:2px solid #fff; margin:0 10px;}
+.personal_date_r{ float:left; width:65%; padding-top:10px;}
+.personal_date_r p{ padding:10px 10px 0 10px; text-align:left; font-size:14px; line-height:18px; color:#fff;}
+.archives_content_main{ padding:3%;}
+.bay_address_list{  margin-bottom:10px;}
+.bay_address_list label{ background:#0c9405; float:left; width:22%; height:47px; line-height:45px; font-size:14px; color:#fff; text-align:center;}
+.bay_address_list2{  margin-bottom:10px;}
+.bay_address_list2 label{ float:left; background:#0c9405; width:96%; padding:0 2%; height:47px; line-height:45px; font-size:14px; color:#fff; text-align:center;}
+.bay_address_list3{ width:95.5%; height:80px; border-radius:0; border:1px solid #0c9405;  padding:2%; font-size:14px; line-height:24px; color:#0c9405;}
+
+
+/*上传化验单*/
+.upload_main{ margin-top:5%; padding:5%;}
+.upload_main label{ background:#0c9405; float:left; width:100%; height:47px; line-height:47px; font-size:16px; color:#fff; text-align:center;}
+.upload_content{ display:inline-block; background:url(../images/records/bg_upload.png) no-repeat; background-size:100% 100%; width:80%; height:100%; margin-bottom:10%; padding:25% 10%; text-align:center;}
+.upload_content img{ width:25%; }
+.upload_content2{ display:inline-block; background:url(../images/records/bg_upload.png) no-repeat; background-size:100% 100%; width:80%; height:100%; margin-bottom:10%; padding:10%; text-align:center;}
+.upload_content2 img{ width:100%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

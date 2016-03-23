@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; font-family:Arail,"Microsoft YaHei";}
+body{font-size:14px; line-height:24px;}
+a{ text-decoration:none;}
+ul,li { list-style:none;}
+
+
+/*框架*/
+.bg_red{ background:url(../images/mother/bg_home.png) repeat-y;}
+.bg_gray{ background:#e7ebee;}
+
+
+/*按钮*/
+.input_test{ -webkit-appearance:none; background:#fff; width:100%; height:45px; line-height:45px; border:none; border-radius:5px; color:#fc5772; font-size:20px;}
+.input_test:hover{-webkit-appearance:none; background:#ebebeb;}
+.input_submit{-webkit-appearance:none; background:#fc5772; width:100%; height:45px; line-height:45px; border:none; border-radius:5px; color:#fff; font-size:20px;}
+.input_submit:hover{-webkit-appearance:none; background:#df1e3d;}
+
+
+
+/*首页——测妈妈合格*/
+.mm_test_main{ margin:0; padding:0;}
+.mm_test_content1{ text-align:center; margin-top:10%; color:#fff;}
+.mm_test_content1 p{ font-size:14px; line-height:48px;}
+.mm_test_content2{ text-align:center; margin-top:10%; margin-bottom:5%; }
+.mm_test_content2 img{ width:45%;}
+.mm_test_content3{ position:fixed; width:90%; margin-left:5%; bottom:10px; }
+.mm_test_content3 p{ font-size:20px; line-height:36px; color:#fff; text-align:center; }
+
+
+/*摘要页面——测妈妈合格*/
+.mm_test_digest{ padding:10px 15px; margin-bottom:40px;}
+.mm_test_digest h1{ display:inline-block; border-bottom:1px solid #fff; width:100%; line-height:60px; color:#fff; font-weight:normal;}
+.mm_test_digest img{ margin-top:20px; width:100%; border:2px solid #fff; border-radius:5px;}
+.mm_test_digest p{ font-size:16px; line-height:36px; color:#fff;}
+.mm_test_digest_bottom{ margin-top:5%; padding:10px 15px;}
+.mm_test_digest_bottom_2{ position:fixed; left:0; bottom:10px; width:92%; margin-left:4%;}
+
+
+/*测试题——测妈妈合格*/
+.mm_test_question{ position:absolute; display:inline-block;  background:url(../images/mother/ba_question.png) no-repeat; background-size:100%; width:100%; height:100%; }
+.mm_question_content{ position:relative; margin-top:20%; margin-left:7%; padding:10px 25px; color:#fff;}
+.mm_question_content h3{ margin-bottom:10px;}
+
+.mm_question_process{ position:relative; width:150px; top:3%; left:45%;}
+.p-bar{ width:100%; height:10px; background:#a3e3a1; border-radius:10px;}
+.mm_question_process span{ display:block; height:10px; width:100%; background:#06fc00; border-radius:10px;}
+.mm_question_process em{ text-decoration:none; font-style:normal; color:#787878;}
+
+.baby_test_question3_4{}
+.baby_test_question3_4 li{ line-height:24px;}
+.baby_test_question3_4 li img{ border:none; vertical-align:sub;}
+.baby_test_question3_5{ padding-left:25px; margin-top:-25px;}
+.baby_test_selected{ color:#f6f300;}
+.mm_test_question_bottom{ position:fixed; left:0; bottom:25px; width:90%; margin-left:5%;}
+.mm_test_question_bottom2{ clear:both; display:inline-block; margin-top:5%; margin-bottom:10px; width:90%; margin-left:5%;}
+/*揭晓答案页面*/
+.mui-dialog-mask{ width:100%; left: 0px; top: 0px; height: 100%; position: fixed; -webkit-user-select: none; z-index:99; background-color:#000; opacity:.8;}
+.play_screen1{ position:fixed; z-index:9999999; top:40%; width:100%; text-align:center;}
+.play_table{ position:relative;  margin-left:5%; width:90%; -webkit-appearance:none; }
+.play_table img{ width:80%;}
+.play_table p{ color:#fff; font-size:15px; line-height:36px;}
+
+
+
+/*正确答案*/
+.mm_answer_main{}
+.mm_answer_main img{ width:100%;}
+.mm_answer_content{ padding:0 5px;}
+.mm_answer_list{ width:90%; margin-left:5%;}
+.mm_answer_list li{ float:left; margin-right:4px; text-align:center;}
+.mm_answer_list li a{ color:#fff; list-style:none;}
+.mm_answer_circle_red{ background:url(../images/mother/circle_red.png) no-repeat; background-size:100%; padding:20px; text-align:center; font-size:36px; color:#fff;}
+.mm_answer_circle_green{ background:url(../images/mother/circle_green.png) no-repeat; background-size:100%; padding:20px; text-align:center; font-size:36px; color:#fff;}
+
+
+/*正确答案详情*/
+.mm_details_main{ margin:2% 7%; width:80%; padding:10px; border:none; border-radius:5px; background:#fc5772; font-size:16px; line-height:36px; color:#fff;}
+.mm_details_main img{ width:45%; float:right; margin-top:8%; margin-bottom:10%;}
+
+
+/*分享结果到朋友圈*/
+.mm_result_main{ }
+.mm_result_main h2{ padding:15px; font-size:18px; line-height:24px; text-align:center; color:#644b29;}
+.mm_resule_content{ display:inline-block; background:url(../images/mother/bg_results.png) no-repeat; background-size:100% 100%; margin:0 3%; padding: 20% 0; width:94%; }
+.mm_resule_detailed{  position:relative; display:block; margin-top:20%; margin-left:20px; text-align:center; color:#644b29; font-size:16px; }
+.mm_resule_detailed h2{ color:#f06c14;}
+.mm_result_attention{ position:relative; clear:both; margin-top:2%; border-bottom:1px solid #8f9090; border-top:1px solid #8f9090; padding:10px 15px;}
+.mm_result_erweima{ padding:15px 10px; }
+.mm_result_erweima img{ width:100%;}
+.mm_result_erweima_l{ float:left; width:40%;  }
+.mm_result_erweima_l img{ width:100%; margin-bottom:2%; display:inline-block;}
+.mm_result_erweima_r{ width:60%; margin-left:40%; padding-left:10px; padding-top:5%; color:#787878;  line-height:24px; text-align:center; }
+.mm_result_bottom{ clear:both; border-top:1px solid #8f9090; margin-top:10px; padding:10px 15px;}
+/*分享到朋友圈*/
+.play_screen2{ position:fixed; z-index:9999999; top:10px; width:100%; }
+.play_table2{ position:relative; float:right; margin-right:5%; width:80%; -webkit-appearance:none; }
+.play_table2 img{ width:100%;}
+
+

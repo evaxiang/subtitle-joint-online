@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; font-family:Arail,"Microsoft YaHei";}
+body{ font-size:14px; line-height:24px; color:#5e5e5e;}
+a{ text-decoration:none;}
+ul,li{ list-style:none;}
+em,i{ list-style:none; font-style:normal;}
+input{ -webkit-appearance:none;}
+
+
+/*框架*/
+.gray_body{ background:#f1f1f1;}
+
+
+/*文字颜色*/
+.t_green { color:#21a607 !important;}
+.t_gray { color:#535c69 !important;}
+.t_orange{ color:#ff6600!important;}
+.t_red{ color:red !important;}
+.t_primary_1{ color:#64cbff; font-size:14px; margin-right:5px; }
+.t_primary_2{ color:#000; }
+.t_primary_3{ color:#787878; font-size:14px; }
+.t_primary_4{ color:#c6c6c6; font-size:12px; }
+
+
+
+
+/*按钮*/
+.btn_exchange{ width:100%; height:50px; line-height:50px; border-radius:5px; background:#41bd27; color:#fff; font-size:18px; border:none; -webkit-appearance:none;}
+
+
+/*底部*/
+#tab{ position:fixed; left:0; bottom:0; width:100%; height:50px; background-color:#efefef;}
+#tab a{ display:block; float:left; margin-top:-15px; width:25%; height:50px; line-height:50px; text-align:center; font-size:12px; color:#000;}
+#tab a i{ display:block; width:24px; height:24px; margin:20px auto -15px auto;}
+#tab a i.ico_home{ background:url(../images/vaccine/ico_tab_home.png) no-repeat;}
+#tab a i.ico_order{background:url(../images/vaccine/ico_tab_order.png) no-repeat;}
+#tab a i.ico_list{background:url(../images/vaccine/ico_tab_list.png) no-repeat;}
+#tab a i.ico_user{background:url(../images/vaccine/ico_tab_user.png) no-repeat;}
+#tab a.sel{ color:#21a607;}
+#tab a i#sel_home{background:url(../images/vaccine/ico_tab_user_home.png) no-repeat;}
+#tab a i#sel_order{background:url(../images/vaccine/ico_tab_user_order.png) no-repeat;}
+#tab a i#sel_list{background:url(../images/vaccine/ico_tab_user_list.png) no-repeat;}
+#tab a i#sel_user{background:url(../images/vaccine/ico_tab_user_sel.png) no-repeat;}
+
+
+/*首页*/
+.user_intro{ width:100%; height:190px; background:url(../images/vaccine/bg_date_person.png) no-repeat left bottom; text-align:center;}
+.user_intro img{ margin:24px auto 10px auto; border-radius:150%; width:104px; height:104px; border:3px solid #fff;}
+
+.personal_date_main{ padding:10px 20px 0 20px; background:url(../images/vaccine/bg_date_person.png) no-repeat; width:100%;}
+.personal_date_l{ float:left; width:35%;}
+.personal_portrait{ }
+.personal_portrait img{ width:90px; height:90px; border-radius:150px; border:3px solid #fff; }
+.personal_date_r{ float:left; width:65%; padding-top:10px;}
+.personal_date_r p{ padding:10px 10px 0 10px; text-align:left; line-height:18px; color:#000;}
+
+.personal_location{ display:inline-block; background:url(../images/vaccine/icon-location.png) no-repeat; width:24px; height:24px; background-size:85%; vertical-align:text-top;}
+.personal_time{ display:inline-block; background: url(../images/vaccine/icon_time.png) no-repeat;  width:24px; height:24px; background-size:85%; vertical-align:text-top;}
+.record_number{ padding-left:60px; margin-bottom:80px;}
+.record_number2{ padding-top:30px; background:url(../images/vaccine/bg_dotted.png) repeat-y 3%; background-size:3px; margin-left:10px;}
+.record_number2 h2{position:relative;  width:18px; height:18px; line-height:40px; text-align:center; font-size:12px; color:#fff; background:#fff; border:1px solid #828282; border-radius:150px; background-size:cover;}
+.record_number2 h2.selected{ background:#21a607; border:1px solid #21a607;}
+.treatment_list ul li { position:relative; margin:20px 0; padding:10px; margin-left:90px; background:#d5e4a9; border-radius:5px; line-height:20px; color:#6c8918;}
+.record_content li{ position:relative; margin-left:12%; margin-top:-4%; margin-right:5%; padding:5px; background:#fff; border:1px solid #21a607;}
+.record_content li:before {content:""; display:block; position:absolute; left:-8px; top:16px; border-right: 8px solid #21a607; border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+.record_content p{line-height:24px;}
+.record_font1{ background:#ff0000; font-size:14px; color:#fff; margin-left:10px; padding:5px 10px;}
+.record_font2{ margin-bottom:10px;}
+.record_font3{ margin-left:-60px; margin-top:-25px; color:#828282;width:60px;
+    font-size:13px;}
+/*个人资料*/
+.user_data_intro{ width:100%; height:190px; margin-bottom:20px; background:#fff; text-align:center;}
+.user_data_intro img{ margin:24px auto 5px auto; border-radius:150px; width:104px; height:104px; border:3px solid #41bd27;}
+.user_data_intro p{ font-size:16px; color:#000;}
+
+.fill_list_love_main{ margin-bottom:60px;}
+.fill_list_love{ margin:15px 0 10px 0; padding:15px 10px; background:#fff; color:#848c99; font-size:16px;}
+.fill_list_love_l{ margin-left:15px;}
+
+.fill_list_love_r{ float:right; }
+.user_forward{ display:inline-block; float:right; margin-right:10px; background:url(../images/vaccine/icon_forward.png) no-repeat; width:18px; height:21px;}
+.user_forward_2{ display:inline-block; float:right; margin-right:10px; background:url(../images/vaccine/icon_forward_2.png)  no-repeat; width:18px; height:21px;}
+.syn_code_main2{ padding:0 15px;}
+.bay_integral_bottom{ margin-top:20px;}
+.fill_list_love2{ margin:15px 0 10px 0; padding:0 10px; background:#fff; color:#848c99; font-size:16px;}
+.fill_list_love2_r{ float:right; margin-top:18px; }
+.input_order_fill{ width:65%; height:55px; padding-left:15px; font-size:16px; border:none; color:#929292;}
+.option_s { margin-left:30px; background: url(../images/vaccine/option_bg.png) no-repeat; background-size:100% 100%; margin-right:2%; width:55%; min-height:42px; padding:0 2%; border: 1px solid #ddd;  font-size:14px; }
+
+
+
+/*疫苗详情*/
+.details_vaccines_main{}
+.details_vaccines_content1{}
+.details_vaccines_content1 li{ margin-bottom:5px; padding:10px; background:#fff; color:#000; font-size:16px;}
+.details_vaccines_fr{ float:right;}
+.details_vaccines_content2{}
+.details_vaccines_content2 li{ padding:10px; border-bottom:5px solid #fff; color:#000; font-size:16px;}
+.details_vaccines_content2 li:last-child{border-bottom:none; }
+
+
+/*防疫站地点*/
+.place_vaccines_main{}
+.place_vaccines_content1{}
+.place_vaccines_content1 li{ margin-bottom:5px; padding:10px; border-bottom:1px solid #d6d6d6;  color:#000; font-size:16px;}
+
+
+
+/*接种点*/
+.place_vaccination_main{}
+.place_vaccination_l5{ margin-left:10px;}
+.place_vaccination_content1{}
+.place_vaccination_content1 li{ padding:10px; border-bottom:1px solid #dedede; color:#000; font-size:16px;}
+.place_vaccination_content2{}
+.place_vaccination_content2 li{ margin:0 15px;  border-bottom:1px solid #dedede; color:#000; font-size:16px;}
+
+
+/*疫苗库*/
+.vaccine_library_main{ margin-bottom:10px; border-bottom:1px solid #d6d5d5;}
+.vaccine_library_search{ margin-bottom:10px;}
+.input_search{ width:80%; margin-left:10%; margin-top:10px; height:40px; line-height:40px; padding-left:10px; font-size:16px; border:1px solid #787878; border-radius:20px; background:#fff; color:#b0b0b0; }
+.vaccine_library_content1{}
+.vaccine_library_content1 li{ padding:5px 10px; border-top:1px solid #dedede;  color:#000; font-size:16px;}
+.vaccine_library_content2{}
+.vaccine_library_content2 li{ padding:10px; background:#fff; border-top:1px solid #dedede;  color:#000; font-size:16px;}
+.icon_vaccine{float:left;}
+.search_glass{ display:inline-block; position:absolute; background:url(../images/vaccine/icon_glass.png) no-repeat; width:30px; height:30px; right:10%; top:19px; cursor:pointer; }
+
+
+
+/*疫苗课堂*/
+.vaccine_classroom_main{ margin-bottom:10px; }
+.stores_main_l{float:left; width:100%; margin:5px 0;}
+.stores_main_l img{ width:100%;}
+.stores_main_l .title{ position:relative; z-index:5; margin-top:-65px; text-align:left; background:rgba(0,0,0,.5); padding:5px 10px; font-size:16px; color:#fff;}
+
+.pos_icon_sliding{ position:absolute; z-index:99; right:5px; margin-top:-25px;}
+.pos_icon_sliding li{ float:left; margin-right:5px;}
+.pos_icon_sliding li img{ border:none;}
+.pos_icon_sliding li#pos_icon_sliding_cover{ background:url(../images/vaccine/icon_sliding_2.png) no-repeat; width:15px; height:15px; }
+
+.vaccine_classroom_content{ display:inline-block; padding:10px 5px; margin-bottom:30px;}
+.vaccine_classroom_list{ margin-top:5px;}
+.vaccine_classroom_list li{ float:left; width:49%; overflow:hidden; margin-right:2%; margin-bottom:10px; } 
+.vaccine_classroom_list li:nth-child(2n) { margin-right:0;}
+.vaccine_classroom_list li img { display:block; position:relative; z-index:-1; width:100%;}
+
+/*疫苗课堂详情*/
+.news_detail{ background:#f7f9ea; padding:15px; font-size:12px; line-height:24px; -webkit-box-sizing:border-box;}
+.news_detail h1 { font-size:20px; line-height:30px;}
+.news_detail time { display:block; margin-top:5px; color:#a0a0a0;}
+.news_detail .guide_info { margin:20px 0; padding:10px; background:#fff; border:1px solid #ddd; border-radius:5px;}
+.news_detail .guide_info_content{}
+.news_detail .guide_info_content img{ width:100%;}
+
+
+.temp_0{color:#64cbff; font-size:16px; margin-left:32px;}
+.temp_1{ color:#828282; font-size:12px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

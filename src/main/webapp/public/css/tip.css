@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; font-family:Arail,"Microsoft YaHei";}
+body{ background:#47d3dc; font-size:14px; line-height:24px;}
+a{ text-decoration:none;}
+ul,li { list-style:none;}
+
+
+
+/*按钮*/
+
+/*字体颜色*/
+.t_primary_1{ color:#55b8be;}
+.t_primary_2{ color:#b93230;}
+.t_primary_3{ color:#443a01; font-size:24px;}
+
+
+/*打赏医生*/
+.docter_exceptional{ background:#fff;}
+.exceptional_main{ margin:0; padding:0;}
+.exceptional_content2{ padding:2%; color:#737373;}
+.exceptional_content2_min{ background:url(../images/exceptional_form.png) no-repeat; min-height:547px; background-size:100%;}
+.exceptional—_price{ float:right; z-index:99; margin-top:48%; margin-right:12%; width:20%; height:5%; line-height:24px; border-radius:5px; background:#f0f0f0; border:2px solid #ffd800; padding:5px 10px; font-size:22px; text-align:center; }
+.exceptional—_price p{ color:#000; font-size:16px; line-height:16px; text-align:center;}
+.exceptional—_price2{}
+.exceptional—_price2 a{ text-decoration:none; border:none;}
+.exceptional—_price2 img{ width:85%; margin-left:8%; margin-top:-2%; }
+.exceptional_content3{ margin-top:10%; margin-bottom:15%;}
+.exceptional_content3 img{ width:80%; margin-left:5%;}
+
+
+/*评分*/
+.exceptional_content{ padding:5%;  color:#737373;}
+.exceptional_eva{}
+.exceptional_eva li{ float:left; margin-right:-10px; margin-top:2%;}
+.exceptional_eva li img{ width:60%;}
+.exceptional_eva2{ clear:both; padding-top:10px; }
+.exceptional_eva2 p{ color:#3e3e3e; line-height:30px;}
+.score_main{ margin-left:5%; margin-top:20%; }
+.btn_score1{-webkit-appearance:none; width:95%; height:45px; line-height:45px; font-size:18px; color:#fff; background:#ffd800; border:1px solid #b75e00; box-shadow:2px 3px 2px 0 rgba(173,173,173,.8); border-radius:8px;}
+
+
+
+
+
+
+
+
+
