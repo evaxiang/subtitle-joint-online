@@ -10,13 +10,14 @@
 <html>
 <head>
   <link href="${ctx}/public/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="${ctx}/public/css/css.css" rel="stylesheet" type="text/css">
   <script src="${ctx}/public/js/jquery-1.11.2.min.js" type="text/javascript"></script>
   <script src="${ctx}/public/js/bootstrap.min.js" type="text/javascript"></script>
   <script src="${ctx}/public/js/jquery.placeholder.js" type="text/javascript"></script>
   <script src="${ctx}/public/js/validate.js" type="text/javascript"></script>
   <script src="${ctx}/public/js/main.js" type="text/javascript"></script>
   <script type="text/javascript" src="${ctx}/public/js/date97/WdatePicker.js"></script>
+  <%--<link href="${ctx}/public/css/style.css" rel="stylesheet">--%>
+
 </head>
 
 </html>

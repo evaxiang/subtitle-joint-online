@@ -32,12 +32,6 @@
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
-
-    <!--<context-param>-->
-        <!--<param-name>webAppRootKey</param-name>-->
-        <!--<param-value>wartifcat</param-value>-->
-    <!--</context-param>-->
-
     <!-- spring mvc servlet -->
     <servlet>
         <servlet-name>dispatcher</servlet-name>
@@ -52,6 +46,16 @@
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/index/loginPage</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <location>/index/loginPage</location>
+    </error-page>
 
     <!--控制session-->
     <!--<filter>-->

@@ -20,7 +20,7 @@ import java.util.Map;
 public class BaseDao {
 
     @Resource(name = "nameJdbcTpl")
-    private NamedParameterJdbcTemplate nameJdbcTpl;
+    protected NamedParameterJdbcTemplate nameJdbcTpl;
 
     /**
      * 插入记录
@@ -186,46 +186,6 @@ public class BaseDao {
         return nameJdbcTpl.queryForObject(sql, ps, Integer.class);
     }
 
-    /**
-     * 查询记录
-     *
-     * @param tname 数据表名称
-     * @param id    主键id
-     * @return
-     */
-    public Map<String, Object> findOne(String tname, int id) throws Exception {
-        String sql = "select * from " + tname + " where t_id=:id";
-        Map<String, Object> paraMap = new HashMap<String, Object>();
-        paraMap.put("id", id);
-        SqlParameterSource ps = new MapSqlParameterSource(paraMap);
-        return nameJdbcTpl.queryForMap(sql, ps);
-    }
 
-    /**
-     * 查询记录
-     *
-     * @param tname 数据表名称
-     * @param mcode    主键mcode
-     * @return
-     */
-    public Map<String, Object> findOne(String tname, String mcode) throws Exception {
-        String sql = "select * from " + tname + " where mcode=:mcode";
-        Map<String, Object> paraMap = new HashMap<String, Object>();
-        paraMap.put("mcode", mcode);
-        SqlParameterSource ps = new MapSqlParameterSource(paraMap);
-        return nameJdbcTpl.queryForMap(sql, ps);
-    }
 
-    public Map<String, Object> findOne(String sql,Map<String,Object> paraMap) throws Exception {
-        SqlParameterSource ps = new MapSqlParameterSource(paraMap);
-        return nameJdbcTpl.queryForMap(sql, ps);
-    }
-
-    public Map<String, Object> findAccount(int userId) throws Exception {
-        String sql = "select * from account where userId=:userId";
-        Map<String, Object> paraMap = new HashMap<String, Object>();
-        paraMap.put("userId", userId);
-        SqlParameterSource ps = new MapSqlParameterSource(paraMap);
-        return nameJdbcTpl.queryForMap(sql, ps);
-    }
 }

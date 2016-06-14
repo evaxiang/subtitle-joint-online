@@ -1,13 +1,13 @@
 package com.controller;
 
-import cn.shellinfo.cn.w.common.AjaxData;
-import cn.shellinfo.cn.w.common.ConfUtil;
-import cn.shellinfo.cn.w.common.util.FileUtil;
+
+import com.dao.UserDao;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
 import com.mongodb.util.JSON;
 import com.util.OssTemplate;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,10 +30,14 @@ import java.io.OutputStream;
 @Controller
 @RequestMapping("/file")
 public class FileUpload {
+    public static final String resUrl = "http://atdoctor.oss-cn-hangzhou.aliyuncs.com/";
     private static Logger logger = Logger.getLogger(FileUpload.class);
 
     @Resource(name = "oss")
     private OssTemplate ossTemplate;
+
+    @Autowired
+    private UserDao userDao;
 
     private static String extName = "gif,jpg,jpeg,png,bmp"; //扩展名
 
@@ -55,11 +59,9 @@ public class FileUpload {
                 }
                 os.write(baos.toByteArray());
                 os.flush();
-            } else {
-                logger.info("文件：" + resId + " 未找到！");
             }
         } catch (IOException e) {
-            logger.error("文件：" + resId + " 读取出错！", e);
+            e.printStackTrace();
         } finally {
             if (os != null) {
                 try {
@@ -74,26 +76,20 @@ public class FileUpload {
 
     @ResponseBody
     @RequestMapping("upload")
-    public AjaxData uploadV(MultipartHttpServletRequest request) throws IOException {
-        AjaxData ajaxData = new AjaxData();
+    public String uploadV(MultipartHttpServletRequest request) throws IOException {
         MultipartFile mf = request.getFile("myFile");
         String filename = mf.getOriginalFilename();
-        String fileExt = FileUtil.getExtensionName(filename);
         byte[] buf = mf.getBytes();
-
         logger.info("========filename========" + filename + "========length========" + buf.length);
 
-        if(buf == null){
-            ajaxData.info = "文件为空";
-            ajaxData.status = -2;
-            return ajaxData;
+        if (buf == null) {
+            return "error";
         }
         String resId = ossTemplate.putFile(filename, buf);
-        DBObject ret = new BasicDBObject("v_url", ConfUtil.getConf("resUrl") + resId).append("v_length", buf.length);
-        ajaxData.data = ret;
-        ajaxData.status = 1;
-        ajaxData.info = "上传成功";
-        return ajaxData;
+        DBObject ret = new BasicDBObject("v_url", resUrl + resId).append("v_length", buf.length);
+        String imgUrl = resUrl + resId;
+//        userDao.updateImgSrc(imgUrl);
+        return imgUrl;
     }
 
     private String getError(String message) {

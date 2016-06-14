@@ -28,7 +28,42 @@
         </property>
     </bean>
 
+
+    <bean id="conversionService"
+          class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.converter.DateConverter" />
+                <bean class="com.converter.CalenderConverter" />
+                <bean class="com.converter.ObjectIdConverter" />
+                <bean class="com.converter.ObjectIdArrayConverter" />
+            </set>
+        </property>
+    </bean>
+
+    <!--step 2 将conversionService加入应用初始化 -->
+    <bean id="webBindingInitializer"
+          class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+        <property name="conversionService" ref="conversionService" />
+    </bean>
+    <!-- step 3 注册ConfigurableWebBindingInitializer到RequestMappingHandlerAdapter -->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="webBindingInitializer" ref="webBindingInitializer" />
+    </bean>
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10000000"/>
+        <property name="maxInMemorySize" value="10240" />
+    </bean>
+
     <mvc:annotation-driven/>
+
+    <mvc:interceptors>
+        <bean class="com.interceptor.SessionInterceptor"/>
+    </mvc:interceptors>
+
+    <mvc:view-controller path="/" view-name="/index" />
 
     <context:component-scan base-package="com.controller" />
 

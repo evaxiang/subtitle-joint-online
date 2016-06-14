@@ -9,12 +9,12 @@
                     <generator class="increment"></generator>
             </id>
 
-            <property name="name" column="username" type="string"></property>
+            <property name="getUsername" column="username" type="string"></property>
             <property name="password" column="password" type="string"></property>
-            <property name="selfIntroduction" column="introduction" type="string"></property>
+            <property name="getIntroduction" column="introduction" type="string"></property>
             <property name="loginTime" column="login_time" type="timestamp"></property>
-            <property name="isSingle" column="is_single" type="boolean"></property>
-            <property name="isSister" column="is_sister" type="boolean"></property>
+            <property name="getIs_Single" column="is_single" type="boolean"></property>
+            <property name="getIs_Sister" column="is_sister" type="boolean"></property>
             <property name="mobile" column="mobile" type="string"></property>
 
 

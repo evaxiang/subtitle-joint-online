@@ -5,19 +5,21 @@ import java.sql.Timestamp;
 /**
  * Created by Andrew on 2016/3/9.
  */
-public class User {
+public class User implements BModel{
 
     private int id;
 
     private String password;
 
-    private String name;
+    private String username;
 
-    private String selfIntroduction;
+    private String introduction;
 
-    private Boolean isSister;
+    private String img_src;
 
-    private Boolean isSingle;
+    private String is_sister;
+
+    private String is_single;
 
     private String mobile;
 
@@ -39,20 +41,20 @@ public class User {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getSelfIntroduction() {
-        return selfIntroduction;
+    public String getIntroduction() {
+        return introduction;
     }
 
-    public void setSelfIntroduction(String selfIntroduction) {
-        this.selfIntroduction = selfIntroduction;
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
     }
 
     public Timestamp getLoginTime() {
@@ -62,20 +64,20 @@ public class User {
     public void setLoginTime(Timestamp loginTime) {
         this.loginTime = loginTime;
     }
-    public Boolean getIsSister() {
-        return isSister;
+    public String getIs_sister() {
+        return is_sister;
     }
 
-    public void setIsSister(Boolean isSister) {
-        this.isSister = isSister;
+    public void setIs_sister(String is_sister) {
+        this.is_sister = is_sister;
     }
 
-    public Boolean getIsSingle() {
-        return isSingle;
+    public String getIs_single() {
+        return is_single;
     }
 
-    public void setIsSingle(Boolean isSingle) {
-        this.isSingle = isSingle;
+    public void setIs_single(String is_single) {
+        this.is_single = is_single;
     }
 
     public String getMobile() {
@@ -84,5 +86,13 @@ public class User {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
+    }
+
+    public String getImg_src() {
+        return img_src;
+    }
+
+    public void setImg_src(String img_src) {
+        this.img_src = img_src;
     }
 }
