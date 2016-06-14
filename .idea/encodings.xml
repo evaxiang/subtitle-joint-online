@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/AjaxData.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/controller/IndexController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/dao/DateRecordDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/dao/LoginDao.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/util/OssTemplate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/commons/footer.jsp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/public/css/h5.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/public/css/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp/public/js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/public/js/cropper.js" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

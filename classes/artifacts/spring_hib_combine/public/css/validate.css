@@ -1,7 +1,0 @@
-/*提示区*/
-.alert_warning,
-.alert_danger,
-.alert_success {position: fixed;left: 50%;bottom: 50%;width: 400px;margin-left: -250px;text-align: center;padding: 5px 15px;text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);-moz-border-radius: 5px; -webkit-border-radius: 5px;border-radius: 5px;}
-.alert_warning {color: #c09853;background-color: #fbeed5;border: 1px solid #af8b4d;}
-.alert_danger {color: #b94a48;background-color: #eed3d7;border: 1px solid #a64442;}
-.alert_success {color: #468847;background-color: #d6e9c6;border: 1px solid #c4d7b8;}

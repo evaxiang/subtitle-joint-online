@@ -25,11 +25,12 @@
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="username" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1"/>
       <column name="password" sqlType="CHAR" precision="20" scale="0" nullable="false" jdbcType="1"/>
-      <column name="is_sister" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" remarks="MOihqOekuuW8n+WFhO+8jDHooajnpLrlp5Dlprk="/>
-      <column name="is_single" sqlType="CHAR" precision="1" scale="0" nullable="true" jdbcType="1" remarks="MOihqOekuumdnnNpbmdsZe+8jDHooajnpLpzaW5nbGU="/>
+      <column name="is_sister" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="MOihqOekuuW8n+WFhO+8jDHooajnpLrlp5Dlprk="/>
+      <column name="is_single" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" remarks="MOihqOekuumdnnNpbmdsZe+8jDHooajnpLpzaW5nbGU="/>
       <column name="mobile" sqlType="CHAR" precision="11" scale="0" nullable="true" jdbcType="1"/>
       <column name="introduction" sqlType="CHAR" precision="30" scale="0" nullable="true" jdbcType="1"/>
       <column name="login_time" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="img_src" sqlType="CHAR" precision="100" scale="0" nullable="true" jdbcType="1" remarks="5aS05YOP6Lev5b6E"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
   </data-source>

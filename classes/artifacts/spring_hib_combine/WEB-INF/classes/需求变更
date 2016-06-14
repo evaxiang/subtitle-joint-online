@@ -1,9 +1,0 @@
-
-1.计算单个顾客所有的订单价值总和
-
--添加totalprice属性
--通过对orders对象的遍历获得订单总价
-
-2.Order怎么看到Customer的id
-
-3.
