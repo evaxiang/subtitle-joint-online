@@ -5,9 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>1</groupId>
-    <artifactId>1</artifactId>
+    <artifactId>hib</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+
     <dependencies>
+
+
+        <!--本地依赖-->
+        <dependency>
+            <groupId>com.weipass</groupId>
+            <artifactId>wcomp</artifactId>
+            <type>jar</type>
+            <scope>system</scope>
+            <version>1.0-SNAPSHOT</version>
+            <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/wcomp-1.0.jar</systemPath>
+        </dependency>
 
         <!--  spring dependency start  -->
         <dependency>
@@ -119,6 +132,18 @@
             <version>1.2.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.3.1</version>
+        </dependency>
+
+        <!-- 返回json数据-->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
 
 
         <!--  hibernate dependency  -->
@@ -214,6 +239,11 @@
             <version>4.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.darwinsys</groupId>
+            <artifactId>hirondelle-date4j</artifactId>
+            <version>1.5.1</version>
+        </dependency>
 
     </dependencies>
 
