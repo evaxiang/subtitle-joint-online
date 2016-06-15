@@ -80,12 +80,12 @@ public class FileUpload {
         MultipartFile mf = request.getFile("myFile");
         String filename = mf.getOriginalFilename();
         byte[] buf = mf.getBytes();
-        logger.info("========filename========" + filename + "========length========" + buf.length);
 
         if (buf == null) {
             return "error";
         }
         String resId = ossTemplate.putFile(filename, buf);
+        logger.info("========filename========" + filename + "========length========" + buf.length);
         DBObject ret = new BasicDBObject("v_url", resUrl + resId).append("v_length", buf.length);
         String imgUrl = resUrl + resId;
 //        userDao.updateImgSrc(imgUrl);
