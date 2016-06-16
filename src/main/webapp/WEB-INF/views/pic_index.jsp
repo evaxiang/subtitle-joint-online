@@ -104,7 +104,7 @@
                         <div class="col-xs-4 formright">
                             <p>
                                 <span class="btn btn-default fileinput-button">
-                                    <span>上传(可选多张)</span>
+                                    <span>上传</span>
                                     <input id="btn_up_url" type="file" name="myFile" multiple/>
                                 </span>
                                 <input id="btn_refresh" class="btn btn-warning" type="button" value="重新上传"/>
@@ -119,18 +119,18 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="btn_up_url" class="col-xs-2 control-label"></label>
+                    <%--<div class="form-group">--%>
+                        <%--<label for="btn_up_url" class="col-xs-2 control-label"></label>--%>
 
-                        <div class="col-xs-4 formright">
-                            <div id="progress" class="progress">
-                                <div class="progress-bar" id="bar" role="progressbar" aria-valuemin="0"
-                                     aria-valuemax="100" style="width: 0%;">
-                                </div>
-                            </div>
-                        </div>
+                        <%--<div class="col-xs-4 formright">--%>
+                            <%--<div id="progress" class="progress">--%>
+                                <%--<div class="progress-bar" id="bar" role="progressbar" aria-valuemin="0"--%>
+                                     <%--aria-valuemax="100" style="width: 0%;">--%>
+                                <%--</div>--%>
+                            <%--</div>--%>
+                        <%--</div>--%>
 
-                    </div>
+                    <%--</div>--%>
 
                     <div class="form-group">
                         <label class="col-xs-2 control-label">图片：</label>
@@ -159,14 +159,11 @@
                     <%--</div>--%>
 
                     <div class="form-group">
-                        <!-- 多说评论框 start -->
                         <label class="col-xs-2 control-label">问题反馈：</label>
 
                         <div class="col-xs-8 formright">
                             <div class="ds-thread" data-thread-key="20160614" data-title="电影截图字幕拼接"
                                  data-url="http://112.74.41.252:8080/hib/movie/pic"></div>
-                            <!-- 多说评论框 end -->
-                            <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
                             <script type="text/javascript">
                                 var duoshuoQuery = {short_name: "movie-screenshot-join"};
                                 (function () {
@@ -179,7 +176,6 @@
                                     || document.getElementsByTagName('body')[0]).appendChild(ds);
                                 })();
                             </script>
-                            <!-- 多说公共JS代码 end -->
                         </div>
                     </div>
 
@@ -192,50 +188,38 @@
 
 <script>
     $(function () {
-//        html2canvas(document.body, {
-//            onrendered: function (canvas) {
-//                document.body.appendChild(canvas);
-//            },
-//            allowTaint: true,
-//            width: 300,
-//            height: 300
-//        });
 
     });
 
     var i = 0;
     $('#btn_up_url').fileupload({
-        autoUpload: true,//是否自动上传
-        url: "${ctx}/file/upload",
-        datatype: "text",
+        datatype: "json",
         done: function (e, data) {
             i++;
             $("#div_refresh").show();
-            $("#img_add").append("<img src='' id='headImg" + i + "' style='display: none;'/>");
-            var resPath = data.result;
-            $('#headImg' + i).attr('src', resPath);
-            $('#headImg' + i).toggle();
-            $("#div_refresh").hide();
             if (i >= 10) {
                 alert("目前仅支持上传10张");
                 $('#btn_up_url').fileupload('disable');
             }
-        },
-        progressall: function (e, data) {
-            var progress = parseInt(data.loaded / data.total * 100, 10);
-            $('#progress #bar').css(
-                    'width',
-                    progress + '%'
-            );
-            if (progress === 100) {
-                alert("已上传，图片较大，请等待服务器处理");
-                $("#div_refresh").show();
+            var file =  data.files[0];
+            var fileName = i+"_"+ file.size ;
+            $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function () {
+                var url = reader.result;
+                $('#' + fileName).attr('src', url);
+                $('#' + fileName).show();
             }
-            $('#progress #bar').css('width', '0%');
+            $("#div_refresh").hide();
         }
     });
 
+
+
+
     $("#btn_screen_pic").click(function () {
+
         if ($("#img_add").children().size() > 1) {
             $("#img_screen").children().remove();
 
@@ -262,8 +246,6 @@
                 htight : $("#img_screen").height(),
                 width: $("#img_add > img").first().width()
             });
-
-
         } else {
             alert("请先上传至少两张图片")
         }

@@ -94,8 +94,21 @@
                                 <input id="img_url" type="hidden"/>
                             </span>
                         </p>
-                        <img src="" id="headImg" style="display: none"/>
+                        <img src="" id="headImg" style="width:50% ; display: none"/>
                     </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="btn_up_url" class="col-xs-4 control-label"></label>
+
+                    <div class="col-xs-6 formright">
+                        <div id="progress" class="progress">
+                            <div class="progress-bar" id="bar" role="progressbar" aria-valuemin="0"
+                                 aria-valuemax="100" style="width: 0%;">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
 
@@ -129,7 +142,7 @@
 
             alert("头像已上传");
             $('#headImg').attr('src', resPath);
-            $('#headImg').toggle();
+            $('#headImg').show();
 //            var $image = $('#headImg')
 //            var minAspectRatio = 0.5;
 //            var maxAspectRatio = 1.5;
@@ -165,6 +178,13 @@
 //                }
 //            });
 
+        },
+        progress: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $('#progress #bar').css(
+                    'width',
+                    progress + '%'
+            );
         }
     });
 
@@ -194,17 +214,17 @@
                 dataType: "json",
                 success: function (data) {
                     if (data.status == 1) {
-                        successHint(data.info);
+                        alert(data.info);
                         setTimeout(function () {
                             window.location.href = "${ctx}/index"
                         }, 1000);
                     } else {
-                        dangerHint(data.info);
+                        alert(data.info);
                         $("#dataform").find("input[type='submit']").prop({'disabled': false});
                     }
                 },
                 error: function (data) {
-                    dangerHint('服务端报错，' + data.status);
+                    alert('服务端报错，' + data.status);
                     $("#dataform").find("input[type='submit']").prop({'disabled': false});
                 }
             });
