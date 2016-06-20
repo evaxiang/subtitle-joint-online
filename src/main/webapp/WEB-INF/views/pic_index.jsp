@@ -94,7 +94,7 @@
                         <div class="col-xs-8 formright">
                             <h1 class="page-header">电影截图字幕生成器</h1>
 
-                            <p>无需会PS，一键生成字幕截图(目前最多限十张截图)</p>
+                            <p>无需会PS，一键生成字幕截图</p>
                         </div>
                     </div>
 
@@ -188,20 +188,41 @@
 
 <script>
     $(function () {
-
+        if(!window.FileReader){
+            alert("This Browser doesn't support yet");
+        }
     });
 
+//    var i = 0;
+//    $('#btn_up_url').fileupload({
+//        datatype: "json",
+//        done: function (e, data) {
+//            i++;
+//            $("#div_refresh").show();
+//            if (i >= 10) {
+//                alert("目前仅支持上传10张");
+//                $('#btn_up_url').fileupload('disable');
+//            }
+//            var file =  data.files[0];
+//            var fileName = i+"_"+ file.size ;
+//            $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
+//            var reader = new FileReader();
+//            reader.readAsDataURL(file);
+//            reader.onload = function () {
+//                var url = reader.result;
+//                $('#' + fileName).attr('src', url);
+//                $('#' + fileName).show();
+//            }
+//            $("#div_refresh").hide();
+//        }
+//    });
+
     var i = 0;
-    $('#btn_up_url').fileupload({
-        datatype: "json",
-        done: function (e, data) {
+    $('#btn_up_url').change(function () {
+        var files =  document.getElementById("btn_up_url").files;
+        $.each(files, function (index, file) {
             i++;
             $("#div_refresh").show();
-            if (i >= 10) {
-                alert("目前仅支持上传10张");
-                $('#btn_up_url').fileupload('disable');
-            }
-            var file =  data.files[0];
             var fileName = i+"_"+ file.size ;
             $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
             var reader = new FileReader();
@@ -212,7 +233,9 @@
                 $('#' + fileName).show();
             }
             $("#div_refresh").hide();
-        }
+        });
+
+
     });
 
 
@@ -254,7 +277,7 @@
     $("#btn_refresh").click(function () {
         $("#img_add").children(":not(#div_refresh)").remove();
         $("#img_screen").children().remove();
-        i = 0 ;
+        i=0;
     });
 
 </script>
