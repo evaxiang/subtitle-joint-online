@@ -1,5 +1,6 @@
 package com.dao;
 
+import com.model.Picture;
 import com.model.User;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -59,4 +60,11 @@ public class UserDao extends BaseDao{
         List<Map<String,Object>> list = nameJdbcTpl.queryForList(sql, Collections.<String, Object>emptyMap());
         return list == null? Collections.<Map<String, Object>>emptyList() : list;
     }
+
+    public void log(Picture picture) throws Exception {
+        String sql = "insert into t_log (name,type,size) values(:name,:type,:size)";
+        insertForBean(sql,picture);
+
+    }
+
 }

@@ -115,6 +115,7 @@
                                        placeholder="设置字幕高度(默认为高度*0.15)" class="form-control">
                                 <span class="input-group-addon">px</span>
                                 <input id="btn_screen_pic" type="button" class="btn btn-primary" value="生成截图"/>
+                                <img id="loadingPic" src="${ctx}/public/images/loading.gif" hidden/>
                             </div>
                         </div>
                     </div>
@@ -193,35 +194,16 @@
         }
     });
 
-//    var i = 0;
-//    $('#btn_up_url').fileupload({
-//        datatype: "json",
-//        done: function (e, data) {
-//            i++;
-//            $("#div_refresh").show();
-//            if (i >= 10) {
-//                alert("目前仅支持上传10张");
-//                $('#btn_up_url').fileupload('disable');
-//            }
-//            var file =  data.files[0];
-//            var fileName = i+"_"+ file.size ;
-//            $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
-//            var reader = new FileReader();
-//            reader.readAsDataURL(file);
-//            reader.onload = function () {
-//                var url = reader.result;
-//                $('#' + fileName).attr('src', url);
-//                $('#' + fileName).show();
-//            }
-//            $("#div_refresh").hide();
-//        }
-//    });
-
     var i = 0;
+    var picWidth,picHeight;
+
     $('#btn_up_url').change(function () {
         var files =  document.getElementById("btn_up_url").files;
         $.each(files, function (index, file) {
             i++;
+            //for log
+            $.post("${ctx}/movie/log", {name:file.name,size:file.size,type:file.type}, "json");
+
             $("#div_refresh").show();
             var fileName = i+"_"+ file.size ;
             $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
@@ -230,11 +212,15 @@
             reader.onload = function () {
                 var url = reader.result;
                 $('#' + fileName).attr('src', url);
+                picWidth = $('#' + fileName).width();
+                picHeight =$('#' + fileName).height();
+                $('#' + fileName).css({"width":"300px"});
                 $('#' + fileName).show();
             }
             $("#div_refresh").hide();
-        });
 
+        });
+        alert("上传完成");
 
     });
 
@@ -245,30 +231,34 @@
 
         if ($("#img_add").children().size() > 1) {
             $("#img_screen").children().remove();
-
+            $("#loadingPic").show();
+            alert("渲染中，请等待");
             $("#img_add > img").each(function (i, domElm) {
                 if (i == 0) {
                     $("#img_screen").append("<div><img   src='" + $(domElm).attr("src") + "' style='z-index: " + (100 - i) + ";position:relative'></div>");
                 } else {
                     var wordHeight;
                     if($("#subTitleHeight").val()){
-                        wordHeight = $(domElm).height() - $("#subTitleHeight").val();
+                        wordHeight = picHeight - $("#subTitleHeight").val();
                     }else{
-                        wordHeight = $(domElm).height() * (1 - 0.15);
+                        wordHeight = picHeight * (1 - 0.15);
                     }
                     $("#img_screen").append("<div><img   src='" + $(domElm).attr("src") + "' style='z-index: " + (100 - i) + ";margin-top:" + (-wordHeight) + "px;position:relative'></div>");
                 }
             });
-            alert("截图已生成,点击右键保存");
+
             html2canvas($("#img_screen"), {
                 onrendered: function (canvas) {
-                    $("#img_screen").children(":not(canvas)").remove();
+                    $("#img_screen").children().remove();
                     $("#img_screen").append(canvas);
+                    alert("渲染完成");
                 },
                 allowTaint: true,
-                htight : $("#img_screen").height(),
-                width: $("#img_add > img").first().width()
+                height : $("#img_screen").height(),
+                width: picWidth
             });
+            $("#loadingPic").hide();
+
         } else {
             alert("请先上传至少两张图片")
         }
