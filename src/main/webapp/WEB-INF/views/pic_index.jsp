@@ -92,9 +92,10 @@
                         <label class="col-xs-2 control-label"></label>
 
                         <div class="col-xs-8 formright">
-                            <h1 class="page-header">电影截图字幕生成器</h1>
+                            <h1 class="page-header">电影截图字幕拼接器</h1>
 
                             <p>无需会PS，一键生成字幕截图</p>
+                            <p>知乎:<a href="https://www.zhihu.com/people/an-de-77">https://www.zhihu.com/people/an-de-77</a></p>
                         </div>
                     </div>
 
@@ -197,10 +198,19 @@
     var i = 0;
     var picWidth,picHeight;
 
+
     $('#btn_up_url').change(function () {
+        var allowUpload = true;
         var files =  document.getElementById("btn_up_url").files;
         $.each(files, function (index, file) {
             i++;
+            var MIMEReg = /image\/(png|jpg|jpeg|bmp)/i ;
+            if(! MIMEReg.test(file.type)){
+                alert("暂时只支持bmp/png/jpg/jpeg格式文件");
+                allowUpload = false;
+                return false;
+            }
+
             //for log
             $.post("${ctx}/movie/log", {name:file.name,size:file.size,type:file.type}, "json");
 
@@ -218,10 +228,10 @@
                 $('#' + fileName).show();
             }
             $("#div_refresh").hide();
-
         });
-        alert("上传完成");
-
+        if(allowUpload) {
+            alert("上传完成");
+        }
     });
 
 
@@ -252,12 +262,21 @@
                     $("#img_screen").children().remove();
                     $("#img_screen").append(canvas);
                     alert("渲染完成");
+                    var canvas = $("#img_screen > canvas")[0];
+                    $.post('${ctx}/movie/upload',
+                            {
+                                img : canvas.toDataURL("image/png")
+                            }, function(data) {
+                                console.log(data);
+                            },"json");
                 },
                 allowTaint: true,
                 height : $("#img_screen").height(),
                 width: picWidth
             });
             $("#loadingPic").hide();
+
+
 
         } else {
             alert("请先上传至少两张图片")
