@@ -39,40 +39,6 @@
             padding-right: 0;
         }
 
-        @keyframes mymove {
-            0% {
-                transform: rotate(0deg);
-                -ms-transform: rotate(0deg); /* IE 9 */
-                -moz-transform: rotate(0deg); /* Firefox */
-                -webkit-transform: rotate(0deg); /* Safari 和 Chrome */
-                -o-transform: rotate(0deg); /* Opera */
-            }
-            100% {
-                transform: rotate(360deg);
-                -ms-transform: rotate(360deg); /* IE 9 */
-                -moz-transform: rotate(360deg); /* Firefox */
-                -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
-                -o-transform: rotate(360deg);
-            }
-        }
-
-        @-webkit-keyframes mymove /* Safari and Chrome */
-        {
-            0% {
-                transform: rotate(0deg);
-                -ms-transform: rotate(0deg); /* IE 9 */
-                -moz-transform: rotate(0deg); /* Firefox */
-                -webkit-transform: rotate(0deg); /* Safari 和 Chrome */
-                -o-transform: rotate(0deg); /* Opera */
-            }
-            100% {
-                transform: rotate(360deg);
-                -ms-transform: rotate(360deg); /* IE 9 */
-                -moz-transform: rotate(360deg); /* Firefox */
-                -webkit-transform: rotate(360deg); /* Safari 和 Chrome */
-                -o-transform: rotate(360deg);
-            }
-        }
 
         .form-group > div {
             margin-top: 7px;
@@ -152,9 +118,9 @@
                     <div class="form-group">
                         <label class="col-xs-2 control-label">图片：</label>
 
-                        <%--<div class="col-xs-10 formright" id="img_add">--%>
+                        <div class="col-xs-10 formright" id="img_add">
                             <%--<div id="div_refresh" hidden><span class="glyphicon glyphicon-repeat img_refresh"></span></div>--%>
-                        <%--</div>--%>
+                        </div>
 
                     </div>
 
@@ -162,7 +128,7 @@
                         <label class="col-xs-2 control-label">生成截图：</label>
 
                         <div class="col-xs-10 formright" id="img_screen">
-                            <img id="stamp" src="${ctx}/public/images/stamp.png" hidden/>
+                            <%--<img id="stamp" src="${ctx}/public/images/stamp.png" hidden/>--%>
                         </div>
                     </div>
 
@@ -234,7 +200,9 @@
             }
 
             //for log
-            $.post("${ctx}/movie/log", {name:file.name,size:file.size,type:file.type}, "json");
+            $.post("${ctx}/movie/log", {name:file.name,size:file.size,type:file.type}, function () {
+
+            } ,"json");
 
 //            $("#div_refresh").show();
             var fileName = i+"_"+ file.size ;
