@@ -16,7 +16,7 @@
   <script src="${ctx}/public/js/validate.js" type="text/javascript"></script>
   <script src="${ctx}/public/js/main.js" type="text/javascript"></script>
   <script type="text/javascript" src="${ctx}/public/js/date97/WdatePicker.js"></script>
-  <%--<link href="${ctx}/public/css/style.css" rel="stylesheet">--%>
+  <link href="${ctx}/public/css/style.css" rel="stylesheet">
 
 </head>
 

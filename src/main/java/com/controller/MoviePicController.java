@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-import java.util.UUID;
 
 /**
  * Created by Andrew on 2016/6/13.
@@ -71,18 +70,19 @@ public class MoviePicController {
         movieDao.saveScreen(params);
 
         ajaxData.success("上传成功");
-        if(needDownload.equals("true")){
-            response.setHeader("Content-Disposition", "inline; filename=\"" + UUID.randomUUID() + ".jpg\"");
-            response.setContentType("image/jpeg");
-            response.getOutputStream().write(imageData);
-            response.getOutputStream().flush();
-        }
+//        if(needDownload.equals("true")){
+//            response.setContentType("image/jpeg");
+//            response.setHeader("Content-Disposition", "attachment; filename=icon" + ".jpg");
+//            response.getOutputStream().write(imageData);
+//            response.getOutputStream().close();
+//            response.getOutputStream().flush();
+//        }
 
         return ajaxData.toJson();
     }
 
     @RequestMapping("download")
-    @ResponseBody
+
     public byte[] download(HttpServletRequest request, HttpServletResponse response, String img,
                          @RequestParam(value = "needDownload" , defaultValue = "") String needDownload) throws IOException {
         AjaxData ajaxData = new AjaxData();
