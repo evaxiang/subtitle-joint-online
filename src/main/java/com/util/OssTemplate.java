@@ -40,6 +40,7 @@ public class OssTemplate {
         objectMeta.setContentType(getMime(fileType));
         ByteArrayInputStream input = new ByteArrayInputStream(data);
         client.putObject(bucket, key, input, objectMeta);
+
         return key;
     }
 

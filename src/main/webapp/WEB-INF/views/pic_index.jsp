@@ -10,14 +10,14 @@
     <title>字幕拼接器</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="${ctx}/public/css/jquery.fileupload.css">
-    <link rel="stylesheet" href="${ctx}/public/css/cropper.css">
+    <%--<link rel="stylesheet" href="${ctx}/public/css/cropper.css">--%>
     <script src="${ctx}/public/js/vendor/jquery.ui.widget.js" type="text/javascript"></script>
     <script src="${ctx}/public/js/jquery.iframe-transport.js" type="text/javascript"></script>
     <script src="${ctx}/public/js/jquery.fileupload.js" type="text/javascript"></script>
     <script src="${ctx}/public/js/dist/html2canvas.js"></script>
 </head>
 <body>
-<div class="container-fluid">
+<div class="container">
 
     <div class="row">
         <div class="panel-body" style="min-height: 520px;">
@@ -29,21 +29,32 @@
                         <label class="col-xs-2 control-label"></label>
 
                         <div class="col-xs-8 formright">
-                            <h1 class="page-header">字幕拼接器</h1>
-
-                            <p>无需会PS,一键生成字幕截图,访问 <em>http://subtitle-joint.online/</em></p>
-                            <p>知乎:<a href="https://www.zhihu.com/people/an-de-77">https://www.zhihu.com/people/an-de-77</a></p>
-                            <p>
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/d6ee2d6c77ac8da23a5d74d07605dca4.png" target="_blank">请回答1988</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9d979d84abaaa8ec0f62376615d8bff6.png" target="_blank">纳尼亚传奇3</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9bb518a23598aa784bfdf9c7abe3462.png" target="_blank">埃及王子</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/885ffc79805d6136131460110660b38.png" target="_blank">怦然心动</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/33e3e98f13772ef561f7d45a0589078f.png" target="_blank">阿甘正传</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/777fc48f7dd0eb4b1dc0bdff6fe94a5b.png" target="_blank">谁知道这是哪部?</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/5154d3d72ed34a28ec5bcb42cad07684.png" target="_blank">亿万</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/4b659e182df07110ad7bf837061383fc.png" target="_blank">聚焦</a>|
-                                <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/822991f79f0d1be88a698d6db24dfbc0.png" target="_blank">印度的女儿</a>
-                            </p>
+                            <div class="col-xs-8 formright">
+                                <h1 class="page-header">字幕拼接器</h1>
+                                <p>无需会PS,一键生成字幕截图,访问 <em>http://subtitle-joint.online/</em></p>
+                                <%--<p>知乎:<a href="https://www.zhihu.com/people/an-de-77">https://www.zhihu.com/people/an-de-77</a></p>--%>
+                                <%--<p>公告：因为我暂时没有时间打理，每个月也有服务器的支出，加上用户数量也有限，预计过段时间会关闭自己的服务器。到时会放在公司的服务器上，通过IP地址可以访问</p>--%>
+                                <p>
+                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/d6ee2d6c77ac8da23a5d74d07605dca4.png"
+                                       target="_blank">请回答1988</a>|
+                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9d979d84abaaa8ec0f62376615d8bff6.png"
+                                       target="_blank">纳尼亚传奇3</a>|
+                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9bb518a23598aa784bfdf9c7abe3462.png"
+                                       target="_blank">埃及王子</a>|
+                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/885ffc79805d6136131460110660b38.png"
+                                       target="_blank">怦然心动</a>|
+                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/33e3e98f13772ef561f7d45a0589078f.png"
+                                       target="_blank">阿甘正传</a>|
+                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/822991f79f0d1be88a698d6db24dfbc0.png"
+                                       target="_blank">印度的女儿|</a>
+                                    <a href="${ctx}/movie/listAllMoviePic" >查看更多</a>
+                                </p>
+                            </div>
+                            <div class="col-xs-4 formright" style="text-align: center;">
+                                <img src="${ctx}/public/images/transferCode.png"/>
+                                <p>觉得好用的亲请转账鼓励,</p>
+                                <p>用以维护和后续新功能开发</p>
+                            </div>
                         </div>
                     </div>
 
@@ -143,9 +154,9 @@
             }
 
             //for log
-            $.post("${ctx}/movie/log", {name:file.name,size:file.size,type:file.type}, function () {
+            <%--$.post("${ctx}/movie/log", {name:file.name,size:file.size,type:file.type}, function () {--%>
 
-            } ,"json");
+            <%--} ,"json");--%>
 
             var fileName = i+"_"+ file.size ;
             $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
@@ -161,20 +172,21 @@
             }
         });
         if(allowUpload) {
-            alert("上传完成");
+            successHint("上传完成");
         }
     });
 
 
     $("#btn_screen_pic").click(function () {
 
-        if ($("#img_add").children().size() > 1) {
+        if ($("#img_add").children().size() > 1) {s
+            successHint("渲染中，请等待");
+
             $("#img_screen").children(":not(#stamp)").remove();
             $("#loadingPic").show();
             $("#stamp").attr("width",picWidth);
             $("#stamp").show();
 
-            alert("渲染中，请等待");
             $("#img_add > img").each(function (i, domElm) {
                 if (i == 0) {
                     $("#img_screen").append("<div><img   src='" + $(domElm).attr("src") + "' style='z-index: " + (100 - i) + ";position:relative'></div>");
@@ -195,14 +207,14 @@
 //                    $("#img_screen").append(canvas);
                     $("#img_screen").append("<a href='"+canvas.toDataURL("image/jpeg")+"' download='download.png'><img style='vertical-align:middle' src='"+canvas.toDataURL("image/jpeg")+"' title='点击下载'></a> ");
                     $("#stamp").hide();
-                    alert("渲染完成");
+                    successHint("渲染完成");
 
                     $.post('${ctx}/movie/upload',
                             {
                                 img : canvas.toDataURL("image/jpeg"),
                                 needDownload:true
                             }, function(data) {
-                                console.log(data);
+//                                console.log(data);
                             },"json");
                 },
                 allowTaint: true,
@@ -212,7 +224,7 @@
             $("#loadingPic").hide();
 
         } else {
-            alert("请先上传至少两张图片")
+            dangerHint("请先上传至少两张图片")
         }
     });
 

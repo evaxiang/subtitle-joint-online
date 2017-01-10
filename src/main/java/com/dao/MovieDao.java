@@ -30,7 +30,7 @@ public class MovieDao extends BaseDao {
         int count= count(countSql, map);
         int size = Integer.parseInt(map.get("size").toString());
         int pageIndex = (Integer.parseInt(map.get("pageIndex").toString())-1)*size;
-        sql= sql + " limit "+(pageIndex)+","+size;
+        sql= sql + "order by create_time desc limit "+(pageIndex)+","+size;
         List<Map<String, Object>> list = list(sql, map);
 
         Map<String,Object> rs = new HashMap<String,Object>(2);

@@ -24,3 +24,20 @@
 .form-group > div {
     margin-top: 7px;
 }
+
+.alert_warning,
+.alert_danger,
+.alert_success {position: fixed;left: 50%;bottom: 50%; width: 400px; margin-left: -250px; text-align: center; padding: 5px 15px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);}
+.alert_warning {color: #c09853; background-color: #fbeed5; border: 1px solid #af8b4d;}
+.alert_danger {color: #b94a48; background-color: #eed3d7; border: 1px solid #a64442;}
+.alert_success {color: #468847; background-color: #d6e9c6; border: 1px solid #c4d7b8;}
+
+
+/*翻页*/
+.page { padding:50px; text-align:center;}
+.page li { display:inline-block; *zoom:1; *display:inline; margin-left:5px; border:1px solid #e1e1e1;}
+.page li.active { background:#505050; color:#fff;}
+.page li.active span,
+.page a { display:block; padding: 0 10px; min-width:12px; line-height:32px; color:#858175;}
+.page a:hover { background:#f1f1f1;}
+.page li.active span { color:#fff;}

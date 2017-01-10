@@ -4,10 +4,12 @@ import com.AjaxData;
 import com.dao.MovieDao;
 import com.model.Picture;
 import com.util.OssTemplate;
+import com.wangpos.wcomp.page.BootPage;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,6 +19,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -61,7 +64,7 @@ public class MoviePicController {
         String filename = new Random().nextInt()+".jpg";
         String resId = ossTemplate.putFile(filename, imageData);
         String imgSrc = FileUpload.resUrl + resId;
-        logger.info("========imgSrc========" + imgSrc + "========length========" + imageData.length);
+        logger.info("========imgSrc========" + imgSrc);
 
         Map<String,Object> params = new HashMap<>();
         params.put("userId",0);
@@ -90,6 +93,30 @@ public class MoviePicController {
         int contentStartIndex = img.indexOf(encodingPrefix) + encodingPrefix.length();
         byte[] imageData = Base64.decodeBase64(img.substring(contentStartIndex));
         return imageData;
+    }
+
+
+    @RequestMapping("listAllMoviePic")
+    public String getPicList(@RequestParam(value = "pageIndex", defaultValue = "1", required = false) int startIndex,
+                             @RequestParam(value = "size", defaultValue = "10", required = false) int pageSize,
+                             HttpServletRequest req,HttpServletResponse resp,
+                             ModelMap data){
+        Map params = new HashMap();
+        params.put("size",pageSize);
+        params.put("pageIndex",startIndex);
+        try {
+            Map result  =  movieDao.listAllScreenShot(params);
+            Integer count = (Integer)result.get("count");
+            List<Map<String,Object>> picList = (List)result.get("list");
+            data.put("list",picList);
+            data.put("count",count);
+            BootPage page = new BootPage(count, startIndex, pageSize, req);
+            data.put("page", page.show());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return "pic_list";
     }
 
     @RequestMapping("last15")
