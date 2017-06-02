@@ -146,7 +146,7 @@
         $.each(files, function (index, file) {
             allowUpload = true;
             i++;
-            var MIMEReg = /image\/(png|jpg|jpeg|bmp)/i ;
+            const MIMEReg = /image\/(png|jpg|jpeg|bmp)/i ;
             if(! MIMEReg.test(file.type)){
                 alert("暂时只支持bmp/png/jpg/jpeg格式文件");
                 allowUpload = false;
@@ -158,15 +158,16 @@
 
             <%--} ,"json");--%>
 
-            var fileName = i+"_"+ file.size ;
+            let fileName = i+"_"+ file.size ;
             $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
             var reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = function () {
                 var url = reader.result;
                 $('#' + fileName).attr('src', url);
-                picWidth = $('#' + fileName).width();
-                picHeight =$('#' + fileName).height();
+//                picWidth = $('#' + fileName).width();
+//                picHeight =$('#' + fileName).height();
+                [picWidth,picHeight] = [$('#' + fileName).width(), $('#' + fileName).height()];
                 $('#' + fileName).css({"width":"300px"});
                 $('#' + fileName).show();
             }
@@ -179,7 +180,7 @@
 
     $("#btn_screen_pic").click(function () {
 
-        if ($("#img_add").children().size() > 1) {s
+        if ($("#img_add").children().size() > 1) {
             successHint("渲染中，请等待");
 
             $("#img_screen").children(":not(#stamp)").remove();
