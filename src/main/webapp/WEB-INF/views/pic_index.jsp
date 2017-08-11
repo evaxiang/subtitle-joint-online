@@ -31,37 +31,41 @@
                         <div class="col-xs-8 formright">
                             <div class="col-xs-8 formright">
                                 <h1 class="page-header">字幕拼接器</h1>
-                                <p>无需会PS,一键生成字幕截图,访问 <em>http://subtitle-joint.online/</em></p>
+                                <%--<p>无需会PS,一键生成字幕截图,访问 <em>http://subtitle-joint.online/</em></p>--%>
+                                <p>截图生成数<span class="glyphicon glyphicon-film" aria-hidden="true"></span>今日:${todayNum} ，最近30天:${recent30DaysNum} ，总数:${totalNum}</p>
                                 <%--<p>知乎:<a href="https://www.zhihu.com/people/an-de-77">https://www.zhihu.com/people/an-de-77</a></p>--%>
-                                <%--<p>公告：因为我暂时没有时间打理，每个月也有服务器的支出，加上用户数量也有限，预计过段时间会关闭自己的服务器。到时会放在公司的服务器上，通过IP地址可以访问</p>--%>
                                 <p>
-                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/d6ee2d6c77ac8da23a5d74d07605dca4.png"
-                                       target="_blank">请回答1988</a>|
-                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9d979d84abaaa8ec0f62376615d8bff6.png"
-                                       target="_blank">纳尼亚传奇3</a>|
-                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9bb518a23598aa784bfdf9c7abe3462.png"
-                                       target="_blank">埃及王子</a>|
-                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/885ffc79805d6136131460110660b38.png"
-                                       target="_blank">怦然心动</a>|
-                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/33e3e98f13772ef561f7d45a0589078f.png"
-                                       target="_blank">阿甘正传</a>|
-                                    <a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/822991f79f0d1be88a698d6db24dfbc0.png"
-                                       target="_blank">印度的女儿|</a>
+                                    <%--<a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/d6ee2d6c77ac8da23a5d74d07605dca4.png"--%>
+                                       <%--target="_blank">请回答1988</a>|--%>
+                                    <%--<a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9d979d84abaaa8ec0f62376615d8bff6.png"--%>
+                                       <%--target="_blank">纳尼亚传奇3</a>|--%>
+                                    <%--<a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/9bb518a23598aa784bfdf9c7abe3462.png"--%>
+                                       <%--target="_blank">埃及王子</a>|--%>
+                                    <%--<a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/885ffc79805d6136131460110660b38.png"--%>
+                                       <%--target="_blank">怦然心动</a>|--%>
+                                    <%--<a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/33e3e98f13772ef561f7d45a0589078f.png"--%>
+                                       <%--target="_blank">阿甘正传</a>|--%>
+                                    <%--<a href="http://atdoctor.oss-cn-hangzhou.aliyuncs.com/822991f79f0d1be88a698d6db24dfbc0.png"--%>
+                                       <%--target="_blank">印度的女儿|</a>--%>
                                     <a href="${ctx}/movie/listAllMoviePic" >查看更多</a>
+                                    <a href="${ctx}/movie/listAllMoviePic" ></a>
                                 </p>
+
                             </div>
                             <div class="col-xs-4 formright" style="text-align: center;">
                                 <img src="${ctx}/public/images/transferCode.png"/>
                                 <p>觉得好用的亲请转账鼓励,</p>
                                 <p>用以维护和后续新功能开发</p>
+                                <p><a href="http://www.chenhaiyue.com/wordpress">作者个人博客</a></p>
                             </div>
                         </div>
                     </div>
 
+
                     <div class="form-group">
                         <label for="btn_up_url" class="col-xs-2 control-label">操作：</label>
 
-                        <div class="col-xs-4 formright">
+                        <div class="col-xs-5 formright">
                             <p>
                                 <span class="btn btn-default fileinput-button">
                                     <span>上传</span>
@@ -146,7 +150,7 @@
         $.each(files, function (index, file) {
             allowUpload = true;
             i++;
-            const MIMEReg = /image\/(png|jpg|jpeg|bmp)/i ;
+            var MIMEReg = /image\/(png|jpg|jpeg|bmp)/i ;
             if(! MIMEReg.test(file.type)){
                 alert("暂时只支持bmp/png/jpg/jpeg格式文件");
                 allowUpload = false;
@@ -158,16 +162,15 @@
 
             <%--} ,"json");--%>
 
-            let fileName = i+"_"+ file.size ;
+            var fileName = i+"_"+ file.size ;
             $("#img_add").append("<img src='' id='"+fileName+ "' style='display: none;'/>");
             var reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = function () {
                 var url = reader.result;
                 $('#' + fileName).attr('src', url);
-//                picWidth = $('#' + fileName).width();
-//                picHeight =$('#' + fileName).height();
-                [picWidth,picHeight] = [$('#' + fileName).width(), $('#' + fileName).height()];
+                picWidth = $('#' + fileName).width();
+                picHeight =$('#' + fileName).height();
                 $('#' + fileName).css({"width":"300px"});
                 $('#' + fileName).show();
             }
