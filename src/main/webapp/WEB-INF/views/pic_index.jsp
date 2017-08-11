@@ -100,27 +100,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-xs-2 control-label">问题反馈：</label>
-
-                        <div class="col-xs-8 formright">
-                            <div class="ds-thread" data-thread-key="20160614" data-title="电影截图字幕拼接"
-                                 data-url="http://112.74.41.252:8080/hib/movie/pic"></div>
-                            <script type="text/javascript">
-                                var duoshuoQuery = {short_name: "movie-screenshot-join"};
-                                (function () {
-                                    var ds = document.createElement('script');
-                                    ds.type = 'text/javascript';
-                                    ds.async = true;
-                                    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                                    ds.charset = 'UTF-8';
-                                    (document.getElementsByTagName('head')[0]
-                                    || document.getElementsByTagName('body')[0]).appendChild(ds);
-                                })();
-                            </script>
-                        </div>
-                    </div>
-
                 </div>
             </form>
         </div>
