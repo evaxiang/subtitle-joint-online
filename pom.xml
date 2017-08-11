@@ -7,24 +7,18 @@
     <groupId>1</groupId>
     <artifactId>hib</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    <distributionManagement>
-        <repository>
-            <id>ftp-repository</id>
-            <url>ftp://127.0.0.1/site</url>
-        </repository>
-    </distributionManagement>
-
-    <plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-maven-plugin</artifactId>
-        <version>2.2</version>
-        <configuration>
-            <url>http://localhost:8080/manager/text</url>
-            <server>TomcatServer</server>
-            <path>/yiibaiWebApp</path>
-        </configuration>
-    </plugin>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
     <dependencies>
