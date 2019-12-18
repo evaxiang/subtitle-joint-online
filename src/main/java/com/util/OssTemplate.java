@@ -13,16 +13,6 @@ import java.util.Map;
 
 @Component("oss")
 public class OssTemplate {
-   /* private static final String ACCESS_ID = "aJlS29v55SlRZxa3";
-    private static final String ACCESS_KEY = "RlkVA5Iga2o0ndvBYQ9lmDYiOnGPVg";
-    private static final String OSS_ENDPOINT = "http://oss.aliyuncs.com";
-    private static OSSClient client = null;
-    private static final String bucket = "byhz";*/
-   private static final String ACCESS_ID = "62ZnsvFJ6EnfyFMF";
-    private static final String ACCESS_KEY = "cq6QdfpGSaY1y0aKXYylNn78wT963W";
-    private static final String OSS_ENDPOINT = "http://oss.aliyuncs.com";
-    private static OSSClient client = null;
-    private static final String bucket = "atdoctor";
 
     static {
         // 可以使用ClientConfiguration对象设置代理服务器、最大重试次数等参数。
